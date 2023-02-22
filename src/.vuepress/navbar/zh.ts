@@ -11,7 +11,25 @@ export const zhNavbar = navbar([
         text: '学习笔记',
         prefix: '学习笔记/',
         children: [
-          { text: 'vuepress-v1', link: 'vuepress-v1' }
+          { text: 'vuepress-v1', link: 'vuepress-v1' },
+          { text: 'JavaScript异步编程', link: 'JavaScript异步编程' },
+          { text: 'TypeScript', link: 'TypeScript' },
+          { text: 'Vue3', link: 'Vue3' },
+          { text: 'webpack', link: 'webpack' },
+        ]
+      },
+      {
+        text: 'css',
+        prefix: 'css/',
+        children: [
+          { text: '常用css片段', link: '常用css片段' },
+        ]
+      },
+      {
+        text: '项目搭建',
+        prefix: '项目搭建/',
+        children: [
+          { text: 'vue2-template', link: 'vue2-template' },
         ]
       }
     ]
