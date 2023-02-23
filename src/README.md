@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 首页
-heroImage: /logo.svg
+heroImage: /logo.png
 heroText: 唐皓晨的博客
 tagline: 跨端修炼者
 heroFullScreen: true
@@ -33,7 +33,7 @@ projects:
   #   desc: Detailed description of friend
   #   link: https://link.to.your.friend
 
-  # - icon: /logo.svg
+  # - icon: /logo.png
   #   name: custom item
   #   desc: Detailed description of this custom item
   #   link: https://link.to.your.friend
