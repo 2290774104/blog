@@ -20,5 +20,8 @@ export const zhSidebar = sidebar({
       prefix: '项目搭建/',
       children: 'structure'
     }
+  ],
+  '/工具库/': [
+    { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' }
   ]
 });

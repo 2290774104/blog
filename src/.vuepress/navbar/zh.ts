@@ -34,4 +34,11 @@ export const zhNavbar = navbar([
       }
     ]
   },
+  {
+    text: '工具库',
+    prefix: '/工具库/',
+    children: [
+      { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' }
+    ]
+  }
 ]);
