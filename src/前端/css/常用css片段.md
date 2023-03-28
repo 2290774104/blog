@@ -5,7 +5,7 @@ order: 1
 category:
   - 前端
   - css
-tags:
+tag:
   - css
   - scss
 ---

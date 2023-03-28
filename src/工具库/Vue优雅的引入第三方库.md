@@ -5,7 +5,7 @@ order: 1
 category:
   - 前端
   - 工具库
-tags:
+tag:
   - vue
 ---
 

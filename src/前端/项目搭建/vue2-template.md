@@ -5,7 +5,7 @@ order: 1
 category:
   - 前端
   - 项目搭建
-tags:
+tag:
   - vue
 ---
 

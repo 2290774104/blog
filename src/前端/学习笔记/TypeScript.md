@@ -5,7 +5,7 @@ order: 4
 category:
   - 前端
   - 学习笔记
-tags:
+tag:
   - TypeScript
 ---
 

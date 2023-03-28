@@ -5,7 +5,7 @@ order: 3
 category:
   - 前端
   - 学习笔记
-tags:
+tag:
   - JavaScript
   - es6
 ---

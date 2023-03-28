@@ -5,7 +5,7 @@ order: 5
 category:
   - 前端
   - 学习笔记
-tags:
+tag:
   - vue
   - vue3
 ---
