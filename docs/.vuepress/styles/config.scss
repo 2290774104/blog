@@ -1,0 +1,20 @@
+:root {
+  // wide screen
+  --pc: 1440px;
+
+  // // desktop
+  --laptop: 1280px;
+
+  // // narrow desktop / iPad
+  --pad: 959px;
+
+  // // wide mobile
+  --tablet: 719px;
+
+  // // narrow mobile
+  --mobile: 419px;
+
+  // /** dark mode selectors */
+  --dark-selector: "html.dark";
+  --light-selector: "html:not(.dark)";
+}

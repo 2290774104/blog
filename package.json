@@ -1,0 +1,38 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "main": "index.js",
+  "scripts": {
+    "svg": "vsvg -s ./docs/.vuepress/icons/svg -t ./docs/.vuepress/icons/components --ext ts --es6",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2290774104/blog.git"
+  },
+  "keywords": [
+    "vue",
+    "vuepress"
+  ],
+  "author": "唐皓晨",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2290774104/blog/issues"
+  },
+  "homepage": "https://github.com/2290774104/blog#readme",
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vuepress/client": "^2.0.0-beta.61",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.61",
+    "@vuepress/plugin-theme-data": "^2.0.0-beta.61",
+    "@vuepress/shared": "^2.0.0-beta.61",
+    "@vuepress/utils": "^2.0.0-beta.61",
+    "element-plus": "^2.3.2",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6",
+    "vuepress": "^2.0.0-beta.61",
+    "vuepress-shared": "^2.0.0-beta.200"
+  }
+}

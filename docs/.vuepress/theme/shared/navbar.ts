@@ -1,0 +1,28 @@
+import { type AutoLinkOptions, type TextItemOptions } from "./utils.js";
+
+export interface NavGroup<T> extends TextItemOptions {
+  /**
+   * Link prefix of current group
+   *
+   * 当前分组的页面前缀
+   */
+  prefix?: string;
+
+  /**
+   * Link of current group
+   *
+   * 当前分组的链接
+   */
+  link?: string;
+
+  /**
+   * Children of current group
+   *
+   * 当前分组的子项
+   */
+  children: T[];
+}
+
+export type NavbarItem = AutoLinkOptions;
+export type NavbarGroup = NavGroup<NavbarGroup | NavbarItem | string>;
+export type NavbarOptions = (NavbarItem | NavbarGroup | string)[];

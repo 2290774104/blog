@@ -1,0 +1,11 @@
+.hide-in-mobile {
+  @media (max-width: 719px) {
+    display: none !important;
+  }
+}
+
+.hide-in-pad {
+  @media (max-width: 959px) {
+    display: none !important;
+  }
+}
