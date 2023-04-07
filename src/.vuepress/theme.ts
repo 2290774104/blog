@@ -4,6 +4,8 @@ import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://mister-hope.github.io",
+  
+  favicon: "/favicon.ico",
 
   author: {
     name: "唐皓晨",
@@ -19,6 +21,9 @@ export default hopeTheme({
   docsDir: "docs",
 
   blog: {
+    name: '唐皓晨',
+    avatar: '/logo.png',
+    description: '跨端修炼者',
     medias: {
       Baidu: "https://example.com",
       BiliBili: "https://example.com",
@@ -79,13 +84,6 @@ export default hopeTheme({
       metaLocales: {
         editLink: "在 GitHub 上编辑此页",
       },
-    },
-  },
-
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
     },
   },
 
