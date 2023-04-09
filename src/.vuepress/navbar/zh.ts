@@ -1,44 +1,56 @@
-import { navbar } from 'vuepress-theme-hope';
+import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  '/',
+  "/",
   {
-    text: '前端',
-    icon: 'discover',
-    prefix: '/前端/',
+    text: "学习笔记",
+    icon: "discover",
+    prefix: "/学习笔记/",
     children: [
       {
-        text: '学习笔记',
-        prefix: '学习笔记/',
+        text: "基础",
+        prefix: "基础/",
         children: [
-          { text: 'vuepress-v1', link: 'vuepress-v1' },
-          { text: 'JavaScript异步编程', link: 'JavaScript异步编程' },
-          { text: 'TypeScript', link: 'TypeScript' },
-          { text: 'Vue3', link: 'Vue3' },
-          { text: 'webpack', link: 'webpack' },
-        ]
+          { text: "JavaScript异步编程", link: "JavaScript异步编程" },
+          { text: "TypeScript", link: "TypeScript" },
+          { text: "webpack", link: "webpack" },
+        ],
       },
       {
-        text: 'css',
-        prefix: 'css/',
+        text: "Vue",
+        prefix: "vue/",
         children: [
-          { text: '常用css片段', link: '常用css片段' },
-        ]
+          { text: "vuepress-v1", link: "vuepress-v1" },
+          { text: "Vue3", link: "Vue3" },
+        ],
       },
       {
-        text: '项目搭建',
-        prefix: '项目搭建/',
-        children: [
-          { text: 'vue2-template', link: 'vue2-template' },
-        ]
-      }
-    ]
+        text: "React",
+        prefix: "React/",
+        children: [{ text: "react", link: "react" }],
+      },
+    ],
   },
   {
-    text: '工具库',
-    prefix: '/工具库/',
+    text: "项目搭建",
+    prefix: "/项目搭建/",
+    children: [{ text: "vue2-template", link: "vue2-template" }],
+  },
+  {
+    text: "css",
+    prefix: "/css/",
+    children: [{ text: "常用css片段", link: "常用css片段" }],
+  },
+  {
+    text: "架构",
+    prefix: "/架构/",
+    children: [{ text: "实现简单的React", link: "实现简单的React" }],
+  },
+  {
+    text: "工具库",
+    prefix: "/工具库/",
     children: [
-      { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' }
-    ]
-  }
+      { text: "Vue优雅的引入第三方库", link: "Vue优雅的引入第三方库" },
+    ],
+  },
 ]);
