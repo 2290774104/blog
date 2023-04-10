@@ -51,6 +51,11 @@ export const zhNavbar = navbar([
     prefix: "/工具库/",
     children: [
       { text: "Vue优雅的引入第三方库", link: "Vue优雅的引入第三方库" },
+      {
+        text: "tinymce",
+        prefix: "tinymce/",
+        children: [{ text: "在Vue中使用tinymce", link: "在Vue中使用tinymce" }],
+      },
     ],
   },
 ]);

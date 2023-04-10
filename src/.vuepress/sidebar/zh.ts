@@ -26,5 +26,11 @@ export const zhSidebar = sidebar({
   "/架构/": [{ text: "实现简单的React", link: "实现简单的React" }],
   "/工具库/": [
     { text: "Vue优雅的引入第三方库", link: "Vue优雅的引入第三方库" },
+    {
+      text: "tinymce",
+      collapsible: true,
+      prefix: "tinymce/",
+      children: "structure",
+    },
   ],
 });
