@@ -1,7 +1,7 @@
 ---
 title: TypeScript
 date: 2022-02-16 17:36:02
-order: 4
+order: 2
 category:
   - 前端
   - 学习笔记

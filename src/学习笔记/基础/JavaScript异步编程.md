@@ -1,7 +1,7 @@
 ---
 title: JavaScript异步编程
 date: 2022-01-22 10:21:24
-order: 3
+order: 1
 category:
   - 前端
   - 学习笔记
