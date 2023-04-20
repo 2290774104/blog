@@ -33,4 +33,7 @@ export const zhSidebar = sidebar({
       children: "structure",
     },
   ],
+  "/组件文档/": [
+    { text: "p-tabs", link: "p-tabs" },
+  ]
 });
