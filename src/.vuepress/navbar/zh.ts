@@ -54,7 +54,10 @@ export const zhNavbar = navbar([
       {
         text: "tinymce",
         prefix: "tinymce/",
-        children: [{ text: "在Vue中使用tinymce", link: "在Vue中使用tinymce" }],
+        children: [
+          { text: "在Vue中使用tinymce", link: "在Vue中使用tinymce" },
+          { text: "tinymce图片上传插件", link: "tinymce图片上传插件" },
+        ],
       },
     ],
   },
