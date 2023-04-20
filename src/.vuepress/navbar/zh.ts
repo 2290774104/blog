@@ -27,7 +27,7 @@ export const zhNavbar = navbar([
       {
         text: "React",
         prefix: "React/",
-        children: [{ text: "react", link: "react" }],
+        children: [{ text: "React", link: "React" }],
       },
     ],
   },
