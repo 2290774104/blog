@@ -35,5 +35,6 @@ export const zhSidebar = sidebar({
   ],
   "/组件文档/": [
     { text: "p-tabs", link: "p-tabs" },
+    { text: "p-el-select", link: "p-el-select" }
   ]
 });

@@ -64,6 +64,9 @@ export const zhNavbar = navbar([
   {
     text: "组件文档",
     prefix: "/组件文档/",
-    children: [{ text: "p-tabs", link: "p-tabs" }],
+    children: [
+      { text: "p-tabs", link: "p-tabs" },
+      { text: "p-el-select", link: "p-el-select" }
+    ],
   },
 ]);
