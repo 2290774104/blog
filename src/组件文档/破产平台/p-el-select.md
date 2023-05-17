@@ -5,9 +5,11 @@ order: 1
 category:
   - 前端
   - 组件文档
+  - 破产平台
 tag:
   - Vue
   - components
+  - broke
 ---
 
 # p-el-select

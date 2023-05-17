@@ -34,8 +34,11 @@ export const zhSidebar = sidebar({
     },
   ],
   "/组件文档/": [
-    { text: "p-tabs", link: "p-tabs" },
-    { text: "p-el-select", link: "p-el-select" },
-    { text: "p-file-module", link: "p-file-module" }
-  ]
+    {
+      text: "破产平台",
+      collapsible: true,
+      prefix: "破产平台/",
+      children: "structure",
+    },
+  ],
 });
