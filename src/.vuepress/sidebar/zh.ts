@@ -41,4 +41,12 @@ export const zhSidebar = sidebar({
       children: "structure",
     },
   ],
+  "/wink/": [
+    {
+      text: "破产平台",
+      collapsible: true,
+      prefix: "破产平台/",
+      children: "structure",
+    },
+  ],
 });

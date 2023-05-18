@@ -67,7 +67,7 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "破产平台",
-        prefix: "破产平台",
+        prefix: "破产平台/",
         children: [
           { text: "p-tabs", link: "p-tabs" },
           { text: "p-el-select", link: "p-el-select" },
@@ -76,4 +76,17 @@ export const zhNavbar = navbar([
       },
     ],
   },
+  {
+    text: 'wiki',
+    prefix: '/wiki/',
+    children: [
+      {
+        text: '破产平台',
+        prefix: '破产平台/',
+        children: [
+          { text: '破产小程序发布流程', link: '破产小程序发布流程' }
+        ]
+      }
+    ]
+  }
 ]);
