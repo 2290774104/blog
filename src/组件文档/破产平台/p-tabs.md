@@ -80,7 +80,7 @@ export default {
 | v-model | number/string | -      | 绑定值              |
 | tabs    | Array         | []     | 需要渲染的 tab 集合 |
 
-### el-table-ts 事件
+### p-tabs 事件
 
 | 事件名称 | 说明               | 回调参数            |
 | -------- | ------------------ | ------------------- |
