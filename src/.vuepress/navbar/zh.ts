@@ -11,7 +11,7 @@ export const zhNavbar = navbar([
         text: "基础",
         prefix: "基础/",
         children: [
-          { text: "JavaScript异步编程", link: "JavaScript异步编程" },
+          
           { text: "TypeScript", link: "TypeScript" },
           { text: "webpack", link: "webpack" },
         ],
@@ -40,6 +40,14 @@ export const zhNavbar = navbar([
     text: "css",
     prefix: "/css/",
     children: [{ text: "常用css片段", link: "常用css片段" }],
+  },
+  {
+    text: 'node',
+    prefix: '/node/',
+    children: [
+      { text: '高阶函数', link: '高阶函数' },
+      { text: "JavaScript异步编程", link: "JavaScript异步编程" },
+    ]
   },
   {
     text: "架构",
