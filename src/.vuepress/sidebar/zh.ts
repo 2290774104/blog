@@ -23,6 +23,11 @@ export const zhSidebar = sidebar({
   ],
   "/项目搭建/": [{ text: "vue2-template", link: "vue2-template" }],
   "/css/": [{ text: "常用css片段", link: "常用css片段" }],
+  "/node/": [
+    { text: "高阶函数", link: "高阶函数" },
+    { text: "JavaScript异步编程", link: "JavaScript异步编程" },
+    { text: "Promise", link: "Promise" },
+  ],
   "/架构/": [{ text: "实现简单的React", link: "实现简单的React" }],
   "/工具库/": [
     { text: "Vue优雅的引入第三方库", link: "Vue优雅的引入第三方库" },

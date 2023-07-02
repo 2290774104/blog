@@ -47,6 +47,7 @@ export const zhNavbar = navbar([
     children: [
       { text: '高阶函数', link: '高阶函数' },
       { text: "JavaScript异步编程", link: "JavaScript异步编程" },
+      { text: "Promise", link: "Promise" },
     ]
   },
   {
