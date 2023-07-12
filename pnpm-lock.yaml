@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@element-plus/icons-vue': ^2.1.0
   '@vuepress/client': 2.0.0-beta.60
   element-plus: ^2.3.2
   vue: ^3.2.47
@@ -8,6 +9,7 @@ specifiers:
   vuepress-theme-hope: 2.0.0-beta.179
 
 devDependencies:
+  '@element-plus/icons-vue': 2.1.0_vue@3.2.47
   '@vuepress/client': 2.0.0-beta.60
   element-plus: 2.3.2_vue@3.2.47
   vue: 3.2.47

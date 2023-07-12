@@ -38,6 +38,12 @@ export const zhSidebar = sidebar({
       prefix: "tinymce/",
       children: "structure",
     },
+    {
+      text: "常用工具",
+      collapsible: true,
+      prefix: "常用工具/",
+      children: "structure",
+    },
   ],
   "/组件文档/": [
     {

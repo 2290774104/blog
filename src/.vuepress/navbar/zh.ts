@@ -11,7 +11,6 @@ export const zhNavbar = navbar([
         text: "基础",
         prefix: "基础/",
         children: [
-          
           { text: "TypeScript", link: "TypeScript" },
           { text: "webpack", link: "webpack" },
         ],
@@ -42,14 +41,14 @@ export const zhNavbar = navbar([
     children: [{ text: "常用css片段", link: "常用css片段" }],
   },
   {
-    text: 'node',
-    prefix: '/node/',
+    text: "node",
+    prefix: "/node/",
     children: [
-      { text: '高阶函数', link: '高阶函数' },
+      { text: "高阶函数", link: "高阶函数" },
       { text: "JavaScript异步编程", link: "JavaScript异步编程" },
       { text: "Promise", link: "Promise" },
       { text: "node", link: "node" },
-    ]
+    ],
   },
   {
     text: "架构",
@@ -69,6 +68,11 @@ export const zhNavbar = navbar([
           { text: "tinymce图片上传插件", link: "tinymce图片上传插件" },
         ],
       },
+      {
+        text: "常用工具",
+        prefix: "常用工具/",
+        children: [{ text: "Base64图片处理", link: "Base64图片处理" }],
+      },
     ],
   },
   {
@@ -87,17 +91,17 @@ export const zhNavbar = navbar([
     ],
   },
   {
-    text: 'wiki',
-    prefix: '/wiki/',
+    text: "wiki",
+    prefix: "/wiki/",
     children: [
       {
-        text: '破产平台',
-        prefix: '破产平台/',
+        text: "破产平台",
+        prefix: "破产平台/",
         children: [
-          { text: '破产小程序发布流程', link: '破产小程序发布流程' },
-          { text: '人脸识别流程', link: '人脸识别流程' },
-        ]
-      }
-    ]
-  }
+          { text: "破产小程序发布流程", link: "破产小程序发布流程" },
+          { text: "人脸识别流程", link: "人脸识别流程" },
+        ],
+      },
+    ],
+  },
 ]);
