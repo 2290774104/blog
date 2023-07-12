@@ -27,6 +27,7 @@ export const zhSidebar = sidebar({
     { text: "高阶函数", link: "高阶函数" },
     { text: "JavaScript异步编程", link: "JavaScript异步编程" },
     { text: "Promise", link: "Promise" },
+    { text: "node", link: "node" },
   ],
   "/架构/": [{ text: "实现简单的React", link: "实现简单的React" }],
   "/工具库/": [
