@@ -71,7 +71,10 @@ export const zhNavbar = navbar([
       {
         text: "常用工具",
         prefix: "常用工具/",
-        children: [{ text: "Base64图片处理", link: "Base64图片处理" }],
+        children: [
+          { text: "Base64图片处理", link: "Base64图片处理" },
+          { text: "UUID生成器", link: "UUID生成器" },
+        ],
       },
     ],
   },

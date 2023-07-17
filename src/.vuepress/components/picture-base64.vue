@@ -46,7 +46,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import { ElMessage } from "element-plus";
+import { copyText } from '../utils'
 import type { UploadUserFile } from "element-plus";
 import { UploadFilled } from "@element-plus/icons-vue";
 
@@ -65,8 +65,7 @@ const beforeUpload = (file: File) => {
 };
 
 const hanlderCopy = () => {
-  navigator.clipboard.writeText(url.value)
-  ElMessage.success("复制成功");
+  copyText(url.value)
 };
 
 const hanlderReset = () => {
