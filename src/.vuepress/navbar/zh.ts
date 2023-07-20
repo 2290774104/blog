@@ -74,6 +74,7 @@ export const zhNavbar = navbar([
         children: [
           { text: "Base64图片处理", link: "Base64图片处理" },
           { text: "UUID生成器", link: "UUID生成器" },
+          { text: "字母大小写转换", link: "字母大小写转换" },
         ],
       },
     ],
