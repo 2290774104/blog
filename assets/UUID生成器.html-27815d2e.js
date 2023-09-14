@@ -1,0 +1,1 @@
+import{_ as t,r as c,o,c as r,e as n,a as e,b as s}from"./app-ac8a6b76.js";const _={},d=e("h1",{id:"uuid-生成器",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#uuid-生成器","aria-hidden":"true"},"#"),s(" UUID 生成器")],-1);function i(u,l){const a=c("create-uuid");return o(),r("div",null,[d,n(a)])}const f=t(_,[["render",i],["__file","UUID生成器.html.vue"]]);export{f as default};
