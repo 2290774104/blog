@@ -7,7 +7,6 @@
         :limit="1"
         drag
         :before-upload="beforeUpload"
-        :on-success="uploadSuccess"
       >
         <el-icon class="el-icon--upload"><upload-filled /></el-icon>
         <div class="el-upload__text">拖动或<em>点击</em>上传图片</div>
