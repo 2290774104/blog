@@ -13,10 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ca } from "element-plus/es/locale";
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const text = ref("");
+const text = ref('');
 
 const toUpperCase = () => {
   text.value = text.value.toUpperCase();
@@ -27,7 +26,7 @@ const toLowerCase = () => {
 };
 
 const reverseStr = () => {
-  text.value = text.value.split("").reverse().join("");
+  text.value = text.value.split('').reverse().join('');
 };
 
 const toUpperHeadCase = () => {
@@ -35,12 +34,12 @@ const toUpperHeadCase = () => {
 };
 
 const toUpperWordHeadCase = () => {
-  const words = text.value.split(" ");
+  const words = text.value.split(' ');
   console.log(words);
   for (let i = 0; i < words.length; i++) {
     words[i] = titleCase(words[i]);
   }
-  text.value = words.join(" ");
+  text.value = words.join(' ');
 };
 
 const titleCase = (str: string) => {
@@ -48,7 +47,7 @@ const titleCase = (str: string) => {
 };
 
 const switchCase = () => {
-  const cases = text.value.split("");
+  const cases = text.value.split('');
   for (let i = 0; i < cases.length; i++) {
     const strCode = cases[i].charCodeAt(0);
     console.log(strCode);
@@ -58,7 +57,7 @@ const switchCase = () => {
       cases[i] = cases[i].toUpperCase();
     }
   }
-  text.value = cases.join("");
+  text.value = cases.join('');
 };
 </script>
 

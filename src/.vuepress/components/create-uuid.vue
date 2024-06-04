@@ -26,40 +26,40 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from "vue";
-import { copyText } from '../utils'
+import { reactive, ref } from 'vue';
+import { copyText } from '../utils';
 
 const form = reactive({
   num: 1,
-  isCapital: "1",
+  isCapital: '1',
 });
 
-const uuids = ref()
+const uuids = ref();
 
 const handlerCreated = () => {
-  const uuidList = []
+  const uuidList: string[] = [];
   for (let index = 0; index < form.num; index++) {
-    uuidList.push(uuid())
+    uuidList.push(uuid());
   }
-  uuids.value = uuidList.join('\n')
-}
+  uuids.value = uuidList.join('\n');
+};
 
 const uuid = () => {
-  return "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+  return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     const r = (Math.random() * 16) | 0;
-    const v = c === "x" ? r : (r & 0x3) | 0x8;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
     const result = v.toString(16);
-    return form.isCapital === '1' ? result.toUpperCase() : result
+    return form.isCapital === '1' ? result.toUpperCase() : result;
   });
 };
 
 const hanlderCopy = () => {
-  copyText(uuids.value)
-}
+  copyText(uuids.value);
+};
 
 const hanlderReset = () => {
-  uuids.value = ''
-}
+  uuids.value = '';
+};
 </script>
 
 <style lang="scss" scoped>

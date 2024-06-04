@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const url = ref();
 
@@ -42,11 +42,11 @@ const hanlderPaste = () => {
 };
 
 const hanlderReset = () => {
-  url.value = "";
+  url.value = '';
 };
 
 const handlerDownload = () => {
-  const arr = url.value.split(",");
+  const arr = url.value.split(',');
   const mime = arr[0].match(/:(.*?);/)[1];
   const bstr = atob(arr[1]);
   let n = bstr.length;
@@ -57,7 +57,7 @@ const handlerDownload = () => {
   const blob = new Blob([u8arr], { type: mime });
   const fileUrl = URL.createObjectURL(blob);
   console.log(fileUrl);
-  const a = document.createElement("a");
+  const a = document.createElement('a');
   a.href = fileUrl;
   a.download = uuid();
   document.body.appendChild(a);
@@ -66,9 +66,9 @@ const handlerDownload = () => {
 };
 
 const uuid = () => {
-  return "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+  return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     const r = (Math.random() * 16) | 0;
-    const v = c === "x" ? r : (r & 0x3) | 0x8;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
 };

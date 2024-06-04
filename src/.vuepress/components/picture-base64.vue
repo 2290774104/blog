@@ -44,10 +44,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { copyText } from '../utils'
-import type { UploadUserFile } from "element-plus";
-import { UploadFilled } from "@element-plus/icons-vue";
+import { ref } from 'vue';
+import { copyText } from '../utils';
+import type { UploadUserFile } from 'element-plus';
+import { UploadFilled } from '@element-plus/icons-vue';
 
 const fileList = ref<UploadUserFile[]>([]);
 
@@ -64,11 +64,11 @@ const beforeUpload = (file: File) => {
 };
 
 const hanlderCopy = () => {
-  copyText(url.value)
+  copyText(url.value);
 };
 
 const hanlderReset = () => {
-  url.value = "";
+  url.value = '';
   fileList.value = [];
 };
 </script>
