@@ -9,6 +9,7 @@ import Base64Picture from './components/base64-picture.vue';
 import CreateUuid from './components/create-uuid.vue';
 import LetterHandle from './components/letter-handle.vue';
 import TimeConversion from './components/time-conversion.vue';
+import ClickButton from './components/click-button.vue'
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -19,6 +20,7 @@ export default defineClientConfig({
     app.component('CreateUuid', CreateUuid);
     app.component('LetterHandle', LetterHandle);
     app.component('TimeConversion', TimeConversion);
+    app.component('ClickButton', ClickButton)
   },
 
   setup() {},

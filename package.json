@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@vue/repl": "^4.2.1",
     "@vuepress/client": "2.0.0-beta.67",
     "element-plus": "^2.3.12",
     "vue": "^3.3.4",

@@ -15,7 +15,17 @@ export default sidebar({
       children: 'structure',
     },
   ],
+  '/Vue': [
+    { text: 'vuepress-v1', link: 'vuepress-v1' },
+    { text: 'Vue3', link: 'Vue3' },
+  ],
   '/nodejs/': [
+    {
+      text: 'node',
+      collapsible: true,
+      prefix: 'node/',
+      children: 'structure',
+    },
     {
       text: 'nestjs',
       collapsible: true,
@@ -38,6 +48,8 @@ export default sidebar({
       children: 'structure',
     },
   ],
+  '/项目搭建/': [{ text: 'vue2-template', link: 'vue2-template' }],
+  '/css/': [{ text: '常用css片段', link: '常用css片段' }],
   '/组件文档/': [
     {
       text: '破产平台',
