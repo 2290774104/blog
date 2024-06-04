@@ -15,6 +15,14 @@ export default sidebar({
       children: 'structure',
     },
   ],
+  '/nodejs/': [
+    {
+      text: 'nestjs',
+      collapsible: true,
+      prefix: 'nestjs/',
+      children: 'structure',
+    },
+  ],
   '/工具库/': [
     { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' },
     {

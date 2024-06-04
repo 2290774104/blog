@@ -1,4 +1,4 @@
-import { navbar } from 'vuepress-theme-hope'
+import { navbar } from 'vuepress-theme-hope';
 
 export default navbar([
   '/',
@@ -29,8 +29,20 @@ export default navbar([
     children: [],
   },
   {
-    text: "工具库",
-    prefix: "/工具库/",
+    text: 'nodejs',
+    prefix: '/nodejs/',
+    children: [
+      {
+        text: 'nestjs',
+        prefix: 'nestjs/',
+        children: [{ text: 'nestjs安装', link: 'nestjs安装' }],
+      },
+    ],
+  },
+
+  {
+    text: '工具库',
+    prefix: '/工具库/',
     children: [
       { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' },
       {
@@ -82,4 +94,4 @@ export default navbar([
       },
     ],
   },
-])
+]);
