@@ -50,7 +50,10 @@ export default navbar([
       {
         text: 'nestjs',
         prefix: 'nestjs/',
-        children: [{ text: 'nestjs安装', link: 'nestjs安装' }],
+        children: [
+          { text: 'nestjs安装', link: 'nestjs安装' },
+          { text: 'DTO验证入参', link: 'DTO验证入参' },
+        ],
       },
     ],
   },
