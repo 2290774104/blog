@@ -36,6 +36,13 @@ export default navbar([
     children: [],
   },
   {
+    text: '微前端',
+    prefix: '/微前端/',
+    children: [
+      { text: '微前端', link: '微前端' },
+    ],
+  },
+  {
     text: 'nodejs',
     prefix: '/nodejs/',
     children: [
