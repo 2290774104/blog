@@ -22,6 +22,7 @@ export default sidebar({
   '/微前端': [
     { text: '微前端', link: '微前端' },
     { text: '路由分发式微前端', link: '路由分发式微前端' },
+    { text: 'iframe', link: 'iframe' },
   ],
   '/nodejs/': [
     {

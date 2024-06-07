@@ -41,6 +41,7 @@ export default navbar([
     children: [
       { text: '微前端', link: '微前端' },
       { text: '路由分发式微前端', link: '路由分发式微前端' },
+      { text: 'iframe', link: 'iframe' },
     ],
   },
   {
