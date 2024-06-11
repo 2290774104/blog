@@ -14,6 +14,11 @@ tag:
 
 通过 iframe，可以很轻松的将一个应用嵌入另一个应用中，而两个项目的静态资源是相互隔离的
 
+```html
+<iframe src="http://localhost:3001/api"></iframe>
+<iframe src="http://localhost:3002/api"></iframe>
+```
+
 ## 优点
 
 - 实现简单
