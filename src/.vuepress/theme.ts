@@ -21,7 +21,11 @@ export default hopeTheme({
 
   repo: "2290774104",
 
+  docsRepo: "https://github.com/2290774104/blog",
+
   docsDir: "src",
+
+  docsBranch: "new-branch",
 
   // navbar
   navbar,
