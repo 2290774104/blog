@@ -42,7 +42,7 @@ export default navbar([
       { text: '微前端', link: '微前端' },
       { text: '路由分发式微前端', link: '路由分发式微前端' },
       { text: 'iframe', link: 'iframe' },
-    ],
+          ],
   },
   {
     text: 'nodejs',
@@ -128,6 +128,16 @@ export default navbar([
           { text: '破产小程序发布流程', link: '破产小程序发布流程' },
           { text: '人脸识别流程', link: '人脸识别流程' },
         ],
+      },
+    ],
+  },
+  {
+    text: '踩坑记录',
+    prefix: '/踩坑记录/',
+    children: [
+      {
+        text: 'TypeScript',
+        link: 'TypeScript/目录',
       },
     ],
   },

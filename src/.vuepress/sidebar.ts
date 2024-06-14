@@ -15,15 +15,15 @@ export default sidebar({
       children: 'structure',
     },
   ],
-  '/Vue': [
+  '/Vue/': [
     { text: 'vuepress-v1', link: 'vuepress-v1' },
     { text: 'Vue3', link: 'Vue3' },
   ],
-  '/微前端': [
+  '/微前端/': [
     { text: '微前端', link: '微前端' },
     { text: '路由分发式微前端', link: '路由分发式微前端' },
     { text: 'iframe', link: 'iframe' },
-  ],
+      ],
   '/nodejs/': [
     {
       text: 'node',
@@ -68,6 +68,14 @@ export default sidebar({
       text: '破产平台',
       collapsible: true,
       prefix: '破产平台/',
+      children: 'structure',
+    },
+  ],
+  '/踩坑记录/': [
+    {
+      text: 'TypeScript',
+      collapsible: true,
+      prefix: 'TypeScript/',
       children: 'structure',
     },
   ],
