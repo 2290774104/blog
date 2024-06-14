@@ -139,6 +139,10 @@ export default navbar([
         text: 'TypeScript',
         link: 'TypeScript/目录',
       },
+      {
+        text: '微前端',
+        link: '微前端/目录',
+      },
     ],
   },
 ]);

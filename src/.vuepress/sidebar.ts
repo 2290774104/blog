@@ -78,5 +78,11 @@ export default sidebar({
       prefix: 'TypeScript/',
       children: 'structure',
     },
+    {
+      text: '微前端',
+      collapsible: true,
+      prefix: '微前端/',
+      children: 'structure',
+    },
   ],
 });
