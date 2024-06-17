@@ -1,7 +1,7 @@
 ---
 title: single-spa子应用路由跳转报错
 date: 2024-06-14 16:05:25
-order: 1
+order: 2
 category:
   - 前端
   - 踩坑记录
