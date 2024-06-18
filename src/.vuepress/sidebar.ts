@@ -20,7 +20,8 @@ export default sidebar({
     { text: 'Vue3', link: 'Vue3' },
   ],
   '/React/': [
-    { text: 'React路由使用', link: 'React路由使用' }
+    { text: 'React路由使用', link: 'React路由使用' },
+    { text: 'Antd中文设置', link: 'Antd中文设置' },
   ],
   '/微前端/': [
     { text: '微前端', link: '微前端' },
