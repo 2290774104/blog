@@ -42,7 +42,15 @@ export default navbar([
       { text: '微前端', link: '微前端' },
       { text: '路由分发式微前端', link: '路由分发式微前端' },
       { text: 'iframe', link: 'iframe' },
-          ],
+      {
+        text: 'single-spa',
+        prefix: 'single-spa/',
+        children: [
+          { text: 'single-spa基础', link: 'single-spa基础' },
+          { text: 'single-spa示例', link: 'single-spa示例' },
+        ],
+      },
+    ],
   },
   {
     text: 'nodejs',

@@ -23,7 +23,13 @@ export default sidebar({
     { text: '微前端', link: '微前端' },
     { text: '路由分发式微前端', link: '路由分发式微前端' },
     { text: 'iframe', link: 'iframe' },
-      ],
+    {
+      text: 'single-spa',
+      collapsible: true,
+      prefix: 'single-spa/',
+      children: 'structure',
+    },
+  ],
   '/nodejs/': [
     {
       text: 'node',
