@@ -1,0 +1,1 @@
+import{_ as t,r as a,o as n,c,e as r,a as e,b as s}from"./app-ce950eb2.js";const _={},i=e("h1",{id:"时间转换",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#时间转换","aria-hidden":"true"},"#"),s(" 时间转换")],-1);function d(l,m){const o=a("time-conversion");return n(),c("div",null,[i,r(o)])}const f=t(_,[["render",d],["__file","时间转换.html.vue"]]);export{f as default};
