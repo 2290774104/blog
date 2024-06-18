@@ -19,6 +19,9 @@ export default sidebar({
     { text: 'vuepress-v1', link: 'vuepress-v1' },
     { text: 'Vue3', link: 'Vue3' },
   ],
+  '/React/': [
+    { text: 'React路由使用', link: 'React路由使用' }
+  ],
   '/微前端/': [
     { text: '微前端', link: '微前端' },
     { text: '路由分发式微前端', link: '路由分发式微前端' },

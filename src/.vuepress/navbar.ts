@@ -33,7 +33,9 @@ export default navbar([
   {
     text: 'React',
     prefix: '/React/',
-    children: [],
+    children: [
+      { text: 'React路由使用', link: 'React路由使用' }
+    ],
   },
   {
     text: '微前端',
