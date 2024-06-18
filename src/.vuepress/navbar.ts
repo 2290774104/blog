@@ -18,7 +18,13 @@ export default navbar([
       {
         text: '打包工具',
         prefix: '打包工具/',
-        children: [{ text: 'webpack', link: 'webpack' }],
+        children: [
+          { text: 'webpack', link: 'webpack' },
+          {
+            text: 'Vite对TypeScript的支持及其原理',
+            link: 'Vite对TypeScript的支持及其原理',
+          },
+        ],
       },
     ],
   },
