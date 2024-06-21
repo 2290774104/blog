@@ -57,6 +57,12 @@ export default sidebar({
       children: 'structure',
     },
     {
+      text: '百度地图',
+      collapsible: true,
+      prefix: '百度地图/',
+      children: 'structure'
+    },
+    {
       text: '常用工具',
       collapsible: true,
       prefix: '常用工具/',

@@ -98,6 +98,13 @@ export default navbar([
         ],
       },
       {
+        text: '百度地图',
+        prefix: '百度地图/',
+        children: [
+          { text: '申请开发者', link: '申请开发者' },
+        ]
+      },
+      {
         text: '常用工具',
         prefix: '常用工具/',
         children: [
