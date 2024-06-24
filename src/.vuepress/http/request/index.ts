@@ -5,7 +5,7 @@ import type {
   AxiosRequestConfig,
   Canceler,
   Method,
-  InternalAxiosRequestConfig
+  InternalAxiosRequestConfig,
 } from 'axios';
 import type { RequestConfig, RequestInterceptors, PendingType } from './types';
 
@@ -52,7 +52,7 @@ class Request {
             method: res.method as Method,
             params: res.params,
             data: res.data,
-            cancel: c
+            cancel: c,
           });
         });
         return res;
@@ -87,11 +87,11 @@ class Request {
     return new Promise((resolve, reject) => {
       // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
       if (config.interceptors?.requestInterceptors) {
-        config = config.interceptors.requestInterceptors(config);
+        config = config.interceptors.requestInterceptors(config as any);
       }
       this.instance
         .request<any, T>(config)
-        .then(res => {
+        .then((res) => {
           // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
           if (config.interceptors?.responseInterceptors) {
             res = config.interceptors.responseInterceptors<T>(res);

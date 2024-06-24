@@ -18,4 +18,4 @@ const http = {
   $postArraybuffer,
 };
 
-export default http
+export default http;
