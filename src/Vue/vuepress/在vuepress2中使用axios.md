@@ -64,3 +64,7 @@ const getApi = async () => {
 </script>
 <style lang="scss"></style>
 ```
+
+## 跨域问题
+
+详见[解决vuepress2跨域](./解决vuepress2跨域)
