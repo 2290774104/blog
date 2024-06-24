@@ -10,6 +10,7 @@ import CreateUuid from './components/create-uuid.vue';
 import LetterHandle from './components/letter-handle.vue';
 import TimeConversion from './components/time-conversion.vue';
 import ClickButton from './components/click-button.vue';
+import BaiduMap from './components/baidu-map.vue';
 
 import http from './http';
 
@@ -25,6 +26,7 @@ export default defineClientConfig({
     app.component('LetterHandle', LetterHandle);
     app.component('TimeConversion', TimeConversion);
     app.component('ClickButton', ClickButton);
+    app.component('BaiduMap', BaiduMap);
   },
 
   setup() {},

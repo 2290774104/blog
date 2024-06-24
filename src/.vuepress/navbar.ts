@@ -109,6 +109,7 @@ export default navbar([
         prefix: '百度地图/',
         children: [
           { text: '申请开发者', link: '申请开发者' },
+          { text: '在Vue3中使用', link: '在Vue3中使用' },
         ],
       },
       {

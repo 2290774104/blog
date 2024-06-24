@@ -1,4 +1,4 @@
-import { defineUserConfig } from "vuepress";
+import { defineUserConfig, viteBundler } from "vuepress";
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -9,6 +9,21 @@ export default defineUserConfig({
   description: "唐皓晨的博客",
 
   theme,
+
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        proxy: {
+          '/map': {
+            target: 'http://api.map.baidu.com',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/map/, "")
+          }
+        }
+      }
+    },
+    vuePluginOptions: {}
+  })
 
   // Enable it with pwa
   // shouldPrefetch: false,
