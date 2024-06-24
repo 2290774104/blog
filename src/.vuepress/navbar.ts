@@ -32,7 +32,14 @@ export default navbar([
     text: 'Vue',
     prefix: '/Vue/',
     children: [
-      { text: 'vuepress-v1', link: 'vuepress-v1' },
+      {
+        text: 'vuepress',
+        prefix: 'vuepress/',
+        children: [
+          { text: 'vuepress-v1', link: 'vuepress-v1' },
+          { text: '在vuepress2中使用axios', link: '在vuepress2中使用axios' },
+        ],
+      },
       { text: 'Vue3', link: 'Vue3' },
     ],
   },
@@ -102,7 +109,7 @@ export default navbar([
         prefix: '百度地图/',
         children: [
           { text: '申请开发者', link: '申请开发者' },
-        ]
+        ],
       },
       {
         text: '常用工具',

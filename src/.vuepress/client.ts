@@ -9,18 +9,22 @@ import Base64Picture from './components/base64-picture.vue';
 import CreateUuid from './components/create-uuid.vue';
 import LetterHandle from './components/letter-handle.vue';
 import TimeConversion from './components/time-conversion.vue';
-import ClickButton from './components/click-button.vue'
+import ClickButton from './components/click-button.vue';
+
+import http from './http';
 
 export default defineClientConfig({
   enhance({ app }) {
     app.use(ElementPlus, { locale: zhCn });
+
+    app.config.globalProperties.http = http;
 
     app.component('PictureBase64', PictureBase64);
     app.component('Base64Picture', Base64Picture);
     app.component('CreateUuid', CreateUuid);
     app.component('LetterHandle', LetterHandle);
     app.component('TimeConversion', TimeConversion);
-    app.component('ClickButton', ClickButton)
+    app.component('ClickButton', ClickButton);
   },
 
   setup() {},

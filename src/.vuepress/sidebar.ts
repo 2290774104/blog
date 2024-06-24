@@ -16,7 +16,12 @@ export default sidebar({
     },
   ],
   '/Vue/': [
-    { text: 'vuepress-v1', link: 'vuepress-v1' },
+    {
+      text: 'vuepress',
+      collapsible: true,
+      prefix: 'vuepress/',
+      children: 'structure'
+    },
     { text: 'Vue3', link: 'Vue3' },
   ],
   '/React/': [
