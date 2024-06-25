@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import Request from './request';
 
 interface HTTPRequestConfig {
@@ -7,28 +6,26 @@ interface HTTPRequestConfig {
 
 const AJ = 'application/json';
 const AXC = 'application/x-www-form-urlencoded;charset=UTF-8';
-// 类型“{ timeout: number; interceptors: { requestInterceptors: (config: InternalAxiosRequestConfig<any>) => InternalAxiosRequestConfig<any>; responseInterceptors: <T = AxiosResponse<...>>(result: T) => T; }; }”的参数不能赋给类型“RequestConfig”的参数。
-const request = new Request({
-  timeout: 60000,
+
+export const request = new Request({
+  timeout: 1000 * 60 * 1,
   interceptors: {
     // 请求拦截器
     requestInterceptors: (config) => {
-      console.log('通用实例请求拦截器');
+      console.log('实例请求拦截器');
       return config;
     },
     // 响应拦截器
     responseInterceptors: (result) => {
-      console.log('通用实例响应拦截器');
+      console.log('实例响应拦截器');
       return result;
     },
   },
 });
 
-const http = request.instance;
-
-export const $post: HTTPRequestConfig = function (url, data, contentType) {
+export const $post: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AJ;
-  return http({
+  return request.request({
     method: 'post',
     url,
     data,
@@ -39,7 +36,7 @@ export const $post: HTTPRequestConfig = function (url, data, contentType) {
 export const $get: HTTPRequestConfig = function (url, data, contentType) {
   const ct = contentType || AXC;
   data = data || {};
-  return http({
+  return request.request({
     method: 'get',
     url,
     params: data,
@@ -49,10 +46,10 @@ export const $get: HTTPRequestConfig = function (url, data, contentType) {
   });
 };
 
-export const $delete: HTTPRequestConfig = function (url, data, contentType) {
+export const $delete: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AXC;
   data = data || {};
-  return http({
+  return request.request({
     method: 'delete',
     url,
     params: data,
@@ -62,10 +59,10 @@ export const $delete: HTTPRequestConfig = function (url, data, contentType) {
   });
 };
 
-export const $put: HTTPRequestConfig = function (url, data, contentType) {
+export const $put: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AJ;
   data = data || {};
-  return http({
+  return request.request({
     method: 'put',
     url,
     data,
@@ -73,10 +70,10 @@ export const $put: HTTPRequestConfig = function (url, data, contentType) {
   });
 };
 
-export const $getBlob: HTTPRequestConfig = function (url, data, contentType) {
+export const $getBlob: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AXC;
   data = data || {};
-  return http({
+  return request.request({
     method: 'get',
     url,
     params: data,
@@ -87,9 +84,9 @@ export const $getBlob: HTTPRequestConfig = function (url, data, contentType) {
   });
 };
 
-export const $postBlob: HTTPRequestConfig = function (url, data, contentType) {
+export const $postBlob: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AJ;
-  return http({
+  return request.request({
     method: 'post',
     url,
     data,
@@ -98,13 +95,9 @@ export const $postBlob: HTTPRequestConfig = function (url, data, contentType) {
   });
 };
 
-export const $postArraybuffer: HTTPRequestConfig = function (
-  url,
-  data,
-  contentType
-) {
+export const $postArraybuffer: HTTPRequestConfig = (url, data, contentType) => {
   const ct = contentType || AJ;
-  return http({
+  return request.request({
     method: 'post',
     url,
     data,
