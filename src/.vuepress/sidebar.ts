@@ -111,5 +111,11 @@ export default sidebar({
       prefix: '微前端/',
       children: 'structure',
     },
+    {
+      text: 'VuePress',
+      collapsible: true,
+      prefix: 'VuePress/',
+      children: 'structure'
+    }
   ],
 });

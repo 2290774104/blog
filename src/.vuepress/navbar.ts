@@ -183,6 +183,10 @@ export default navbar([
         text: '微前端',
         link: '微前端/目录',
       },
+      {
+        text: 'VuePress',
+        link: 'VuePress/目录'
+      }
     ],
   },
 ]);
