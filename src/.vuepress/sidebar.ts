@@ -68,6 +68,12 @@ export default sidebar({
       children: 'structure'
     },
     {
+      text: 'axios',
+      collapsible: true,
+      prefix: 'axios/',
+      children: 'structure'
+    },
+    {
       text: '常用工具',
       collapsible: true,
       prefix: '常用工具/',

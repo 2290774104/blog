@@ -114,6 +114,13 @@ export default navbar([
         ],
       },
       {
+        text: 'axios',
+        prefix: 'axios/',
+        children: [
+          { text: 'axios二次封装', link: 'axios二次封装' }
+        ]
+      },
+      {
         text: '常用工具',
         prefix: '常用工具/',
         children: [
