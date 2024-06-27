@@ -98,7 +98,9 @@ export default hopeTheme({
       attrs: true,
       codetabs: true,
       component: true,
-      demo: true,
+      // vuepress-theme-hope 主题中附带的 Demo 预览 vue 时，出现报错
+      // 这里选择禁用主题中的预览，使用本地插件实现预览
+      // demo: true,
       figure: true,
       imgLazyload: true,
       imgSize: true,

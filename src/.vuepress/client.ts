@@ -11,6 +11,8 @@ import LetterHandle from './components/letter-handle.vue';
 import TimeConversion from './components/time-conversion.vue';
 import ClickButton from './components/click-button.vue';
 import BaiduMap from './components/baidu-map.vue';
+// 引入Demo预览组件，于本地插件中动态替换 ::: demo ::: 标签
+import PreviewComponents from './components/PreviewComponents/index.vue';
 
 import http from './http';
 
@@ -27,6 +29,7 @@ export default defineClientConfig({
     app.component('TimeConversion', TimeConversion);
     app.component('ClickButton', ClickButton);
     app.component('BaiduMap', BaiduMap);
+    app.component('PreviewComponents', PreviewComponents);
   },
 
   setup() {},
