@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -24,7 +25,13 @@ export default defineUserConfig({
       }
     },
     vuePluginOptions: {}
-  })
+  }),
+
+  plugins: [
+    searchProPlugin({
+      autoSuggestions: true
+    })
+  ]
 
   // Enable it with pwa
   // shouldPrefetch: false,

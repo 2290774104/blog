@@ -21,6 +21,7 @@
     "reveal.js": "^5.1.0",
     "vue": "^3.4.30",
     "vuepress": "2.0.0-rc.14",
+    "vuepress-plugin-search-pro": "2.0.0-rc.50",
     "vuepress-theme-hope": "2.0.0-rc.50"
   },
   "dependencies": {
