@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@utils": "file:./src/.vuepress/utils",
+    "@icons": "file:./src/.vuepress/components/icons",
     "@vue/repl": "^4.2.1",
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/client": "2.0.0-rc.14",

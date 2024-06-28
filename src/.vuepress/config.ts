@@ -23,6 +23,7 @@ export default defineUserConfig({
       resolve: {
         alias: {
           '@utils': resolve('./utils'),
+          '@icons': resolve('./components/icons')
         },
       },
       server: {
