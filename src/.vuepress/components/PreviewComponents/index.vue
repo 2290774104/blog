@@ -12,26 +12,11 @@
         placement="bottom"
       >
         <i
-          class="el-icon op-btn el-tooltip__trigger el-tooltip__trigger"
-          aria-label="复制代码"
-          tabindex="0"
-          role="button"
-          data-v-5d9e4641=""
+          class="el-icon"
           style="font-size: 16px"
           @click="handleCopy"
         >
-          <svg
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-            width="1.2em"
-            height="1.2em"
-            data-v-5d9e4641=""
-          >
-            <path
-              fill="currentColor"
-              d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"
-            ></path>
-          </svg>
+          <CopyCode />
         </i>
       </el-tooltip>
       <el-tooltip
@@ -42,22 +27,10 @@
       >
         <i
           class="el-icon"
-          data-v-5d9e4641=""
           style="font-size: 16px"
           @click="handleExpanded"
         >
-          <svg
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-            width="1.2em"
-            height="1.2em"
-            data-v-5d9e4641=""
-          >
-            <path
-              fill="currentColor"
-              d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"
-            ></path>
-          </svg>
+          <ViewCode />
         </i>
       </el-tooltip>
     </div>
@@ -81,8 +54,9 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import { CaretTop } from '@element-plus/icons-vue'
-import { copyText } from '../../utils'
+import { CaretTop } from '@element-plus/icons-vue';
+import { CopyCode, ViewCode } from '../icons';
+import { copyText } from '../../utils';
 
 const isExpanded = ref(false);
 
@@ -93,8 +67,8 @@ const expandedTooltip = computed(() => {
 const code = ref<any>(null);
 
 const handleCopy = () => {
-  const text = (code.value as HTMLElement).innerText
-  copyText(text)
+  const text = (code.value as HTMLElement).innerText;
+  copyText(text);
 };
 
 const handleExpanded = () => {
@@ -154,11 +128,16 @@ const handleHidden = () => {
   border-top: 1px solid #dcdcdc;
   height: 44px;
   background-color: #fff;
+  font-size: 14px;
   color: #909399;
   cursor: pointer;
 
   &:hover {
     color: #409eff;
+  }
+
+  span {
+    margin-left: 10px;
   }
 }
 </style>
