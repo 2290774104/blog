@@ -45,7 +45,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { copyText } from '../utils';
+import { copyText } from '@utils';
 import type { UploadUserFile } from 'element-plus';
 import { UploadFilled } from '@element-plus/icons-vue';
 

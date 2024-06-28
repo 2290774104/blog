@@ -27,7 +27,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
-import { copyText } from '../utils';
+import { copyText } from '@utils';
 
 const form = reactive({
   num: 1,

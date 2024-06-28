@@ -74,7 +74,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { copyText } from '../utils';
+import { copyText } from '@utils';
 import { dayjs } from 'element-plus';
 import { DocumentCopy } from '@element-plus/icons-vue';
 

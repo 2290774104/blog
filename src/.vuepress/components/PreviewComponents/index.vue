@@ -56,7 +56,7 @@
 import { computed, ref } from 'vue';
 import { CaretTop } from '@element-plus/icons-vue';
 import { CopyCode, ViewCode } from '../icons';
-import { copyText } from '../../utils';
+import { copyText } from '@utils';
 
 const isExpanded = ref(false);
 

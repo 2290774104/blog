@@ -5,6 +5,10 @@ import theme from './theme';
 // 使用本地Demo预览插件
 import { previewDemoPlugin } from '../../plugins/markdown/plugin-preview-demo';
 
+import path from 'path';
+
+const resolve = (src: string) => path.join(__dirname, src);
+
 export default defineUserConfig({
   base: '/blog/',
 
@@ -16,6 +20,11 @@ export default defineUserConfig({
 
   bundler: viteBundler({
     viteOptions: {
+      resolve: {
+        alias: {
+          '@utils': resolve('./utils'),
+        },
+      },
       server: {
         proxy: {
           '/map': {
