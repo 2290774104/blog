@@ -40,6 +40,7 @@ export default navbar([
           { text: '在vuepress2中使用axios', link: '在vuepress2中使用axios' },
           { text: '解决vuepress2跨域', link: '解决vuepress2跨域' },
           { text: 'vuepress2本地插件编写', link: 'vuepress2本地插件编写' },
+          { text: '仿element风格Demo展示', link: '仿element风格Demo展示' },
         ],
       },
       { text: 'Vue3', link: 'Vue3' },
