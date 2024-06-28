@@ -3,7 +3,7 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { searchProPlugin } from 'vuepress-plugin-search-pro';
 import theme from './theme';
 // 使用本地Demo预览插件
-import { previewDemo } from '../../plugins/markdown/plugin-preview-demo';
+import { previewDemoPlugin } from '../../plugins/markdown/plugin-preview-demo';
 
 export default defineUserConfig({
   base: '/blog/',
@@ -33,7 +33,7 @@ export default defineUserConfig({
     searchProPlugin({
       autoSuggestions: true,
     }),
-    previewDemo({}),
+    previewDemoPlugin({}),
   ],
 
   // Enable it with pwa

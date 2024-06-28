@@ -1,7 +1,7 @@
 import { Plugin } from 'vuepress';
 import mdContainer from 'markdown-it-container';
 
-export const previewDemo = (options = {}): Plugin => {
+export const previewDemoPlugin = (options = {}): Plugin => {
   options = Object.assign({});
 
   return (app) => {
