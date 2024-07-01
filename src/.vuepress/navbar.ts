@@ -46,7 +46,10 @@ export default navbar([
       {
         text: 'Vue3',
         prefix: 'Vue3',
-        children: [{ text: 'Vue3基础', link: 'Vue3基础' }],
+        children: [
+          { text: 'Vue3基础', link: 'Vue3基础' },
+          { text: 'Vue3定义全局变量', link: 'Vue3定义全局变量' },
+        ],
       },
       {
         text: '项目搭建',
