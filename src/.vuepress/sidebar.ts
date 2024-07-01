@@ -49,6 +49,12 @@ export default sidebar({
       prefix: 'single-spa/',
       children: 'structure',
     },
+    {
+      text: 'qiankun',
+      collapsible: true,
+      prefix: 'qiankun/',
+      children: 'structure',
+    },
   ],
   '/nodejs/': [
     {

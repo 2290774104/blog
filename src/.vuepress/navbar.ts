@@ -81,6 +81,13 @@ export default navbar([
           { text: 'single-spa示例', link: 'single-spa示例' },
         ],
       },
+      {
+        text: 'qiankun',
+        prefix: 'qiankun/',
+        children: [
+          { text: 'qiankun集成vue2+webpack', link: 'qiankun集成vue2+webpack' }
+        ]
+      }
     ],
   },
   {
