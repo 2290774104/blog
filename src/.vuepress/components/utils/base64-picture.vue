@@ -74,7 +74,7 @@ const uuid = () => {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .base64-picture {
   padding: 20px;
 

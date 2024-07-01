@@ -65,7 +65,7 @@ function initMap(lng = 116.405725, lat = 39.935362) {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .mapp {
   height: 500px;
 }

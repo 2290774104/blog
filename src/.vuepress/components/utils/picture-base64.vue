@@ -73,7 +73,7 @@ const hanlderReset = () => {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .picture-base64 {
   padding: 20px;
 
