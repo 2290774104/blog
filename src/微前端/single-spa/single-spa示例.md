@@ -276,24 +276,30 @@ module.exports = defineConfig({
 
 在子项目根目录创建 .env 独立启动环境变量
 
-```evn
+::: code-tabs#shell
+
+@tab .env
+
+```ts
 NODE_ENV=development
 VUE_APP_BASE_URL=/
 ```
 
-.env.micro 微前端模式下环境变量
+@tab .env.micro
 
-```evn
+```ts
 NODE_ENV=development
 VUE_APP_BASE_URL=/app1
 ```
 
-.env.buildMicro 微前端打包环境变量
+@tab .env.buildMicro
 
-```evn
+```ts
 NODE_ENV=development
 VUE_APP_BASE_URL=/app1
 ```
+
+:::
 
 ### 改造路由
 
@@ -532,24 +538,30 @@ export const unmount = vueLifecycle.unmount;
 
 在子项目根目录创建 .env 独立启动环境变量
 
-```evn
+::: code-tabs#shell
+
+@tab .env
+
+```ts
 NODE_ENV=development
 VITE_APP_BASE_URL=/
 ```
 
-.env.micro 微前端模式下环境变量
+@tab .env.micro
 
-```evn
+```ts
 NODE_ENV=development
-VITE_APP_BASE_URL=/app1
+VITE_APP_BASE_URL=/app3
 ```
 
-.env.buildMicro 微前端打包环境变量
+@tab .env.buildMicro
 
-```evn
+```ts
 NODE_ENV=development
-VITE_APP_BASE_URL=/app1
+VITE_APP_BASE_URL=/app3
 ```
+
+:::
 
 将配置好的 BASE_URL 配置到路由中
 
