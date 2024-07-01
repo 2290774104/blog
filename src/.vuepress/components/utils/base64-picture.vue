@@ -101,7 +101,7 @@ const uuid = () => {
       height: calc(100% - 35px);
       border-radius: 6px;
 
-      textarea {
+      :deep(textarea) {
         height: 100%;
         border: 0 none;
       }
