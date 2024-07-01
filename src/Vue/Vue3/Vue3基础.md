@@ -1,7 +1,7 @@
 ---
-title: Vue3
+title: Vue3基础
 date: 2022-02-15 10:06:25
-order: 2
+order: 1
 category:
   - 前端
   - 学习笔记
@@ -10,7 +10,7 @@ tag:
   - vue3
 ---
 
-# Vue3
+# Vue3 基础
 
 - `Vue3` 支持 `Vue2` 的大多数特性
 - 更好支持了 `TypeScript`

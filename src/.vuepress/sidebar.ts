@@ -20,9 +20,20 @@ export default sidebar({
       text: 'vuepress',
       collapsible: true,
       prefix: 'vuepress/',
-      children: 'structure'
+      children: 'structure',
     },
-    { text: 'Vue3', link: 'Vue3' },
+    {
+      text: 'Vue3',
+      collapsible: true,
+      prefix: 'Vue3/',
+      children: 'structure',
+    },
+    {
+      text: '项目搭建',
+      collapsible: true,
+      prefix: '项目搭建/',
+      children: 'structure',
+    },
   ],
   '/React/': [
     { text: 'React路由使用', link: 'React路由使用' },
@@ -65,13 +76,13 @@ export default sidebar({
       text: '百度地图',
       collapsible: true,
       prefix: '百度地图/',
-      children: 'structure'
+      children: 'structure',
     },
     {
       text: 'axios',
       collapsible: true,
       prefix: 'axios/',
-      children: 'structure'
+      children: 'structure',
     },
     {
       text: '常用工具',
@@ -80,7 +91,6 @@ export default sidebar({
       children: 'structure',
     },
   ],
-  '/项目搭建/': [{ text: 'vue2-template', link: 'vue2-template' }],
   '/css/': [{ text: '常用css片段', link: '常用css片段' }],
   '/组件文档/': [
     {
@@ -115,7 +125,7 @@ export default sidebar({
       text: 'VuePress',
       collapsible: true,
       prefix: 'VuePress/',
-      children: 'structure'
-    }
+      children: 'structure',
+    },
   ],
 });

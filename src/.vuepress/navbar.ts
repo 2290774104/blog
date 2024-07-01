@@ -43,7 +43,16 @@ export default navbar([
           { text: '仿element风格Demo展示', link: '仿element风格Demo展示' },
         ],
       },
-      { text: 'Vue3', link: 'Vue3' },
+      {
+        text: 'Vue3',
+        prefix: 'Vue3',
+        children: [{ text: 'Vue3基础', link: 'Vue3基础' }],
+      },
+      {
+        text: '项目搭建',
+        prefix: '项目搭建',
+        children: [{ text: 'vue2-template', link: 'vue2-template' }],
+      },
     ],
   },
   {
@@ -118,9 +127,7 @@ export default navbar([
       {
         text: 'axios',
         prefix: 'axios/',
-        children: [
-          { text: 'axios二次封装', link: 'axios二次封装' }
-        ]
+        children: [{ text: 'axios二次封装', link: 'axios二次封装' }],
       },
       {
         text: '常用工具',
@@ -133,11 +140,6 @@ export default navbar([
         ],
       },
     ],
-  },
-  {
-    text: '项目搭建',
-    prefix: '/项目搭建/',
-    children: [{ text: 'vue2-template', link: 'vue2-template' }],
   },
   {
     text: 'css',
@@ -187,8 +189,8 @@ export default navbar([
       },
       {
         text: 'VuePress',
-        link: 'VuePress/目录'
-      }
+        link: 'VuePress/目录',
+      },
     ],
   },
 ]);
