@@ -12,6 +12,7 @@ tag:
   - Vue
   - vue3
   - vite
+  - react
 ---
 
 # single-spa 示例
