@@ -85,9 +85,10 @@ export default navbar([
         text: 'qiankun',
         prefix: 'qiankun/',
         children: [
-          { text: 'qiankun集成vue2+webpack', link: 'qiankun集成vue2+webpack' }
-        ]
-      }
+          { text: 'qiankun集成vue2+webpack', link: 'qiankun集成vue2+webpack' },
+          { text: 'qiankun集成vue2+vite', link: 'qiankun集成vue2+vite' },
+        ],
+      },
     ],
   },
   {
