@@ -148,6 +148,7 @@ export default navbar([
           { text: 'UUID生成器', link: 'UUID生成器' },
           { text: '字母大小写转换', link: '字母大小写转换' },
           { text: '时间转换', link: '时间转换' },
+          { text: 'url编码', link: 'url编码' },
         ],
       },
     ],

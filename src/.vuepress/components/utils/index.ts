@@ -5,6 +5,7 @@ import CreateUuid from './create-uuid.vue';
 import LetterHandle from './letter-handle.vue';
 import TimeConversion from './time-conversion.vue';
 import BaiduMap from './baidu-map.vue';
+import UrlCode from './url-code.vue'
 
 const utilsComponent: any = {
   PictureBase64,
@@ -13,6 +14,7 @@ const utilsComponent: any = {
   LetterHandle,
   TimeConversion,
   BaiduMap,
+  UrlCode
 };
 
 export default {
