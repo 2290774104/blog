@@ -16,7 +16,7 @@
         </el-select>
       </el-form-item>
       <el-form-item>
-        <el-button @click="handlerCreated">生成</el-button>
+        <el-button @click="handleCreated">生成</el-button>
         <el-button @click="hanlderCopy">复制</el-button>
         <el-button @click="hanlderReset">清空</el-button>
       </el-form-item>
@@ -36,7 +36,7 @@ const form = reactive({
 
 const uuids = ref();
 
-const handlerCreated = () => {
+const handleCreated = () => {
   const uuidList: string[] = [];
   for (let index = 0; index < form.num; index++) {
     uuidList.push(uuid());

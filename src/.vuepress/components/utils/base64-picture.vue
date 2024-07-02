@@ -16,7 +16,7 @@
     <el-col :span="12" class="picture-preview">
       <p>
         图片预览
-        <el-button @click="handlerDownload">下载</el-button>
+        <el-button @click="handleDownload">下载</el-button>
       </p>
       <div class="image-wrap">
         <el-image
@@ -45,7 +45,7 @@ const hanlderReset = () => {
   url.value = '';
 };
 
-const handlerDownload = () => {
+const handleDownload = () => {
   const arr = url.value.split(',');
   const mime = arr[0].match(/:(.*?);/)[1];
   const bstr = atob(arr[1]);
