@@ -6,6 +6,7 @@ import LetterHandle from './letter-handle.vue';
 import TimeConversion from './time-conversion.vue';
 import BaiduMap from './baidu-map.vue';
 import UrlCode from './url-code.vue'
+import ConvertCss from './convert-css.vue'
 
 const utilsComponent: any = {
   PictureBase64,
@@ -14,7 +15,8 @@ const utilsComponent: any = {
   LetterHandle,
   TimeConversion,
   BaiduMap,
-  UrlCode
+  UrlCode,
+  ConvertCss
 };
 
 export default {

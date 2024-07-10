@@ -149,6 +149,7 @@ export default navbar([
           { text: '字母大小写转换', link: '字母大小写转换' },
           { text: '时间转换', link: '时间转换' },
           { text: 'url编码', link: 'url编码' },
+          { text: 'css格式转换', link: 'css格式转换' },
         ],
       },
     ],
