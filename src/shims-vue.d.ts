@@ -1,9 +1,9 @@
 declare module '*.vue' {
-    import { ComponentOptions } from 'vue'
-    const componentOptions: ComponentOptions
-    export default componentOptions
+  import { ComponentOptions } from 'vue';
+  const componentOptions: ComponentOptions;
+  export default componentOptions;
 }
 
 declare interface Window {
-    BMap: any;
-  }
+  BMap: any;
+}
