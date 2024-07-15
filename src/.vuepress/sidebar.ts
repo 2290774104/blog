@@ -134,4 +134,10 @@ export default sidebar({
       children: 'structure',
     },
   ],
+  '/其他/': [
+    {
+      text: 'Windows批量修改文件名',
+      link: 'Windows批量修改文件名'
+    }
+  ]
 });

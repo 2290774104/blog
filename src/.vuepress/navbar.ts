@@ -206,4 +206,14 @@ export default navbar([
       },
     ],
   },
+  {
+    text: '其他',
+    prefix: '/其他/',
+    children: [
+      {
+        text: 'Windows批量修改文件名',
+        link: 'Windows批量修改文件名'
+      }
+    ]
+  }
 ]);
