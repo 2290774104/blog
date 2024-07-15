@@ -18,26 +18,18 @@ const marker = ref();
 const config = {
   v: '3.0',
   ak: 'bZD4KRYrtXI4FliEeHeh0hdtNHvyRMm0',
+  callback: 'initMap',
 };
 
-const getBMap = async () => {
-  try {
-    const res = await $get('/map/api', config);
-    console.log(res);
-    const src = `/map${res.slice(
-      res.indexOf('/getscript'),
-      res.lastIndexOf('"')
-    )}`;
-    let script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = src;
-    document.getElementsByTagName('head')[0].appendChild(script);
-    script.onload = () => {
-      initMap();
-    };
-  } catch (error) {
-    console.log(error);
-  }
+const getBMap = () => {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = `http://api.map.baidu.com/api?${new URLSearchParams(
+    config
+  ).toString()}`;
+  console.log(123);
+  document.getElementsByTagName('head')[0].appendChild(script);
+  (window as any).initMap = initMap
 };
 
 getBMap();

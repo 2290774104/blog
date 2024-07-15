@@ -6,4 +6,5 @@ declare module '*.vue' {
 
 declare interface Window {
   BMap: any;
+  initMap: any;
 }
