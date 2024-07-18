@@ -1,7 +1,7 @@
 ---
 title: qiankun集成vue3+vite
 date: 2024-07-01 16:59:18
-order: 4
+order: 5
 category:
   - 前端
   - 学习笔记
