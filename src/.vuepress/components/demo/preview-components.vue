@@ -11,11 +11,7 @@
         effect="dark"
         placement="bottom"
       >
-        <i
-          class="el-icon"
-          style="font-size: 16px"
-          @click="handleCopy"
-        >
+        <i class="el-icon" style="font-size: 16px" @click="handleCopy">
           <CopyCode />
         </i>
       </el-tooltip>
@@ -25,11 +21,7 @@
         effect="dark"
         placement="bottom"
       >
-        <i
-          class="el-icon"
-          style="font-size: 16px"
-          @click="handleExpanded"
-        >
+        <i class="el-icon" style="font-size: 16px" @click="handleExpanded">
           <ViewCode />
         </i>
       </el-tooltip>
@@ -78,13 +70,11 @@ const handleExpanded = () => {
 const handleHidden = () => {
   isExpanded.value = false;
 };
-
-//
 </script>
 
 <style lang="scss" scoped>
 .example {
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
 
   .el-divider {
@@ -101,14 +91,18 @@ const handleHidden = () => {
     .el-icon {
       margin: 0 8px;
       cursor: pointer;
-      color: #909399;
+      color: var(--color);
+
+      &:hover {
+        color: var(--el-text-color-primary);
+      }
     }
   }
 }
 
 .example-showcase {
   padding: 24px;
-  background: #fff;
+  background: var(--bg-color);
 }
 
 .example-source-wrapper {
@@ -125,15 +119,15 @@ const handleHidden = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid var(--border-color);
   height: 44px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   font-size: 14px;
-  color: #909399;
+  color: var(--el-text-color-secondary);
   cursor: pointer;
 
   &:hover {
-    color: #409eff;
+    color: var(--el-color-primary);
   }
 
   span {
