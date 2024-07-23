@@ -95,10 +95,14 @@ const hanlderReset = () => {
     padding-right: 15px;
 
     .image-wrap {
-      border: 1px dashed #dcdfe6;
+      border: 1px dashed var(--el-border-color);
       margin-top: 3px;
       height: calc(100% - 35px);
       border-radius: 6px;
+
+      &:hover {
+        border-color: var(--el-color-primary);
+      }
     }
   }
 
