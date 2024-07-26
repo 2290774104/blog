@@ -10,20 +10,7 @@ import demo from './components/demo';
 
 import http from './http';
 
-const html = document.querySelector('html')!;
-const callback: MutationCallback = (mutationsList, observer) => {
-  const mutations = mutationsList.find((o) => o.attributeName === 'data-theme');
-  if (mutations) {
-    const isDark = html.getAttribute('data-theme') === 'dark'
-    if (isDark) {
-      html.classList.add('dark')
-    } else {
-      html.classList.remove('dark')
-    }
-  }
-};
-const mutationObserver = new MutationObserver(callback);
-mutationObserver.observe(html, { attributes: true });
+let once = true;
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -31,6 +18,28 @@ export default defineClientConfig({
 
     app.use(utils);
     app.use(demo);
+
+    app.mixin({
+      mounted() {
+        if (once) {
+          const html = document.querySelector('html')!;
+          const callback: MutationCallback = (mutationsList, observer) => {
+            const mutations = mutationsList.find((o) => o.attributeName === 'data-theme');
+            if (mutations) {
+              const isDark = html.getAttribute('data-theme') === 'dark';
+              if (isDark) {
+                html.classList.add('dark');
+              } else {
+                html.classList.remove('dark');
+              }
+            }
+          };
+          const mutationObserver = new MutationObserver(callback);
+          mutationObserver.observe(html, { attributes: true });
+          once = false;
+        }
+      },
+    });
 
     app.config.globalProperties.http = http;
   },
