@@ -88,6 +88,7 @@ export default navbar([
           { text: 'qiankun集成vue2+webpack', link: 'qiankun集成vue2+webpack' },
           { text: 'qiankun集成vue2+vite', link: 'qiankun集成vue2+vite' },
           { text: 'qiankun集成vue3+vite', link: 'qiankun集成vue3+vite' },
+          { text: 'qiankun集成react18+vite', link: 'qiankun集成react18+vite' },
         ],
       },
     ],

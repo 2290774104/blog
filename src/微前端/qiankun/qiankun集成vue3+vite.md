@@ -46,14 +46,14 @@ VITE_APP_BASE_URL=/
 
 ```ts
 NODE_ENV=development
-VITE_APP_BASE_URL=/app2
+VITE_APP_BASE_URL=/app3
 ```
 
 @tab .env.buildMicro
 
 ```ts
 NODE_ENV=development
-VITE_APP_BASE_URL=/app2
+VITE_APP_BASE_URL=/app3
 ```
 
 :::
