@@ -17,6 +17,12 @@ export default sidebar({
   ],
   '/Vue/': [
     {
+      text: '工具库',
+      collapsible: true,
+      prefix: '工具库/',
+      children: 'structure',
+    },
+    {
       text: 'vuepress',
       collapsible: true,
       prefix: 'vuepress/',
@@ -79,7 +85,6 @@ export default sidebar({
     },
   ],
   '/工具库/': [
-    { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' },
     {
       text: 'tinymce',
       collapsible: true,

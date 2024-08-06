@@ -1,5 +1,5 @@
 ---
-title: Vue优雅的引入第三方库
+title: Vue2优雅的引入第三方库
 date: 2023-02-23
 order: 1
 category:
@@ -8,6 +8,8 @@ category:
 tag:
   - vue
 ---
+
+# Vue2优雅的引入第三方库
 
 以引入 day.js 为例
 

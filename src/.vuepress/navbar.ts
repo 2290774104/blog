@@ -33,6 +33,13 @@ export default navbar([
     prefix: '/Vue/',
     children: [
       {
+        text: '工具库',
+        prefix: '工具库/',
+        children: [
+          { text: 'Vue2优雅的引入第三方库', link: 'Vue2优雅的引入第三方库' },
+        ],
+      },
+      {
         text: 'vuepress',
         prefix: 'vuepress/',
         children: [
@@ -135,7 +142,6 @@ export default navbar([
     text: '工具库',
     prefix: '/工具库/',
     children: [
-      { text: 'Vue优雅的引入第三方库', link: 'Vue优雅的引入第三方库' },
       {
         text: 'tinymce',
         prefix: 'tinymce/',
