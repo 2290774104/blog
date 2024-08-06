@@ -67,6 +67,19 @@ export default navbar([
     ],
   },
   {
+    text: 'H5',
+    prefix: '/H5/',
+    children: [
+      {
+        text: '工具库',
+        prefix: '工具库/',
+        children: [
+          { text: '轻量级翻页插件swiper', link: '轻量级翻页插件swiper' },
+        ],
+      },
+    ],
+  },
+  {
     text: '微前端',
     prefix: '/微前端/',
     children: [
@@ -216,8 +229,8 @@ export default navbar([
     children: [
       {
         text: 'Windows批量修改文件名',
-        link: 'Windows批量修改文件名'
-      }
-    ]
-  }
+        link: 'Windows批量修改文件名',
+      },
+    ],
+  },
 ]);

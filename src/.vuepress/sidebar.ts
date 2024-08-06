@@ -39,6 +39,14 @@ export default sidebar({
     { text: 'React路由使用', link: 'React路由使用' },
     { text: 'Antd中文设置', link: 'Antd中文设置' },
   ],
+  '/H5/': [
+    {
+      text: '工具库',
+      collapsible: true,
+      prefix: '工具库/',
+      children: 'structure'
+    }
+  ],
   '/微前端/': [
     { text: '微前端', link: '微前端' },
     { text: '路由分发式微前端', link: '路由分发式微前端' },
