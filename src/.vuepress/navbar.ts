@@ -56,6 +56,7 @@ export default navbar([
         children: [
           { text: 'Vue3基础', link: 'Vue3基础' },
           { text: 'Vue3定义全局变量', link: 'Vue3定义全局变量' },
+          { text: 'vue3-setup语法糖中的props', link: 'vue3-setup语法糖中的props' },
         ],
       },
       {
