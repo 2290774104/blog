@@ -1,6 +1,6 @@
 import type { App } from 'vue';
 
-import DownloadSwiper from './download-swiper.vue'
+import DownloadSwiper from './DownloadSwiper.vue'
 
 const utilsComponent: any = {
     DownloadSwiper

@@ -1,12 +1,12 @@
 import type { App } from 'vue';
-import PictureBase64 from './picture-base64.vue';
-import Base64Picture from './base64-picture.vue';
-import CreateUuid from './create-uuid.vue';
-import LetterHandle from './letter-handle.vue';
-import TimeConversion from './time-conversion.vue';
-import BaiduMap from './baidu-map.vue';
-import UrlCode from './url-code.vue'
-import ConvertCss from './convert-css.vue'
+import PictureBase64 from './PictureBase64.vue';
+import Base64Picture from './Base64Picture.vue';
+import CreateUuid from './CreateUuid.vue';
+import LetterHandle from './LetterHandle.vue';
+import TimeConversion from './TimeConversion.vue';
+import BaiduMap from './BaiduMap.vue';
+import UrlCode from './UrlCode.vue'
+import ConvertCss from './ConvertCss.vue'
 
 const utilsComponent: any = {
   PictureBase64,

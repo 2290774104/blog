@@ -1,2 +1,2 @@
-export { default as CopyCode } from './copy-code.vue';
-export { default as ViewCode } from './view-code.vue';
+export { default as CopyCode } from './CopyCode.vue';
+export { default as ViewCode } from './ViewCode.vue';
