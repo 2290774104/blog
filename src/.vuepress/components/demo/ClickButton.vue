@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus';
+import { ElButton, ElMessage } from 'element-plus';
 
 const handleClick = () => {
   ElMessage.info('按钮点击了');

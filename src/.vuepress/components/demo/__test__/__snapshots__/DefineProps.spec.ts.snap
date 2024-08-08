@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DefineProps > 快照测试 1`] = `
+"<div class="text1">这是text1：传入的text1</div>
+<div class="text2">这是text2：传入的text2</div>"
+`;

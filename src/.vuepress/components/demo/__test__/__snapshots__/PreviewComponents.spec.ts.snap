@@ -1,0 +1,55 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PreviewComponents > 快照测试 1`] = `
+"<div data-v-e3d033d8="" class="example">
+  <div data-v-e3d033d8="" class="example-showcase"></div>
+  <div data-v-e3d033d8="" class="el-divider el-divider--horizontal" style="--el-border-style: solid;" role="separator">
+    <!--v-if-->
+  </div>
+  <div data-v-e3d033d8="" class="op-btns"><i data-v-e3d033d8="" class="el-icon copy-code el-tooltip__trigger el-tooltip__trigger" style="font-size: 16px;"><svg data-v-e3d033d8="" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-5d9e4641="">
+        <path fill="currentColor" d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"></path>
+      </svg></i>
+    <!--teleport start-->
+    <!--teleport end--><i data-v-e3d033d8="" class="el-icon view-code el-tooltip__trigger el-tooltip__trigger" style="font-size: 16px;"><svg data-v-e3d033d8="" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-5d9e4641="">
+        <path fill="currentColor" d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"></path>
+      </svg></i>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <transition-stub data-v-e3d033d8="" name="el-collapse-transition" appear="false" persisted="false" css="true">
+    <div data-v-e3d033d8="" class="example-source-wrapper" style="display: none;"></div>
+  </transition-stub>
+  <transition-stub data-v-e3d033d8="" name="el-fade-in" appear="false" persisted="true" css="true">
+    <div data-v-e3d033d8="" class="example-float-control" style="display: none;"><i data-v-e3d033d8="" class="el-icon"><svg data-v-e3d033d8="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+          <path fill="currentColor" d="M512 320 192 704h639.936z"></path>
+        </svg></i><span data-v-e3d033d8="">隐藏源代码</span></div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`PreviewComponents > 快照测试 2`] = `
+"<div data-v-e3d033d8="" class="example">
+  <div data-v-e3d033d8="" class="example-showcase"></div>
+  <div data-v-e3d033d8="" class="el-divider el-divider--horizontal" style="--el-border-style: solid;" role="separator">
+    <!--v-if-->
+  </div>
+  <div data-v-e3d033d8="" class="op-btns"><i data-v-e3d033d8="" class="el-icon copy-code el-tooltip__trigger el-tooltip__trigger" style="font-size: 16px;"><svg data-v-e3d033d8="" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-5d9e4641="">
+        <path fill="currentColor" d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"></path>
+      </svg></i>
+    <!--teleport start-->
+    <!--teleport end--><i data-v-e3d033d8="" class="el-icon view-code el-tooltip__trigger el-tooltip__trigger" style="font-size: 16px;"><svg data-v-e3d033d8="" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-5d9e4641="">
+        <path fill="currentColor" d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"></path>
+      </svg></i>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <transition-stub data-v-e3d033d8="" name="el-collapse-transition" appear="false" persisted="false" css="true">
+    <div data-v-e3d033d8="" class="example-source-wrapper" style=""></div>
+  </transition-stub>
+  <transition-stub data-v-e3d033d8="" name="el-fade-in" appear="false" persisted="true" css="true">
+    <div data-v-e3d033d8="" class="example-float-control" style=""><i data-v-e3d033d8="" class="el-icon"><svg data-v-e3d033d8="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+          <path fill="currentColor" d="M512 320 192 704h639.936z"></path>
+        </svg></i><span data-v-e3d033d8="">隐藏源代码</span></div>
+  </transition-stub>
+</div>"
+`;

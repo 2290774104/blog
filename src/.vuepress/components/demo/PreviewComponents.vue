@@ -11,7 +11,7 @@
         effect="dark"
         placement="bottom"
       >
-        <i class="el-icon" style="font-size: 16px" @click="handleCopy">
+        <i class="el-icon copy-code" style="font-size: 16px" @click="handleCopy">
           <CopyCode />
         </i>
       </el-tooltip>
@@ -21,7 +21,7 @@
         effect="dark"
         placement="bottom"
       >
-        <i class="el-icon" style="font-size: 16px" @click="handleExpanded">
+        <i class="el-icon view-code" style="font-size: 16px" @click="handleExpanded">
           <ViewCode />
         </i>
       </el-tooltip>
@@ -46,9 +46,15 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import { CaretTop } from '@element-plus/icons-vue';
-import { CopyCode, ViewCode } from '@icons';
+import {
+  ElDivider,
+  ElTooltip,
+  ElCollapseTransition,
+  ElIcon,
+} from 'element-plus';
 import { copyText } from '@utils';
+import { CopyCode, ViewCode } from '@icons';
+import { CaretTop } from '@element-plus/icons-vue';
 
 const isExpanded = ref(false);
 
