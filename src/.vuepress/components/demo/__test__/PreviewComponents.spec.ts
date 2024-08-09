@@ -39,14 +39,14 @@ describe('PreviewComponents', () => {
     await wrapper.get('.view-code').trigger('click');
     expect(wrapper.get('.example-source-wrapper').isVisible()).toBe(true);
     expect(wrapper.get('.example-float-control').isVisible()).toBe(true);
-    await wrapper.get('.example-float-control').trigger('click')
+    await wrapper.get('.example-float-control').trigger('click');
     expect(wrapper.get('.example-source-wrapper').isVisible()).toBe(false);
     expect(wrapper.get('.example-float-control').isVisible()).toBe(false);
   });
-  test('快照测试', async() => {
+  test('快照测试', async () => {
     const wrapper = mount(PreviewComponents);
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot();
     await wrapper.get('.view-code').trigger('click');
-    expect(wrapper.html()).toMatchSnapshot()
-  })
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 });

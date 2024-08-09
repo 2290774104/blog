@@ -13,9 +13,8 @@ describe('ClickButton', () => {
     const wrapper = mount(ClickButton);
     wrapper.get('.el-button').trigger('click');
   });
-  test('快照测试', async() => {
+  test('快照测试', async () => {
     const wrapper = mount(ClickButton);
-    expect(wrapper.html()).toMatchSnapshot()
-  })
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 });
-

@@ -25,13 +25,13 @@ describe('DefineProps', () => {
     expect(wrapper.get('.text1').text()).toBe('这是text1：传入的text1');
     expect(wrapper.get('.text2').text()).toBe('这是text2：传入的text2');
   });
-  test('快照测试', async() => {
+  test('快照测试', async () => {
     const wrapper = mount(DefineProps, {
       props: {
         text1: '传入的text1',
         text2: '传入的text2',
       },
     });
-    expect(wrapper.html()).toMatchSnapshot()
-  })
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 });
