@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DownloadSwiper > 快照测试 1`] = `"<a data-v-59a7012f="">下载</a>"`;

@@ -6,7 +6,7 @@ export const copyText = (text: string) => {
 
 export const downloadLocalFile = (file: string) => {
   const a = document.createElement('a');
-  const base = window.location.pathname.split('/')[1]
+  const base = location.pathname.split('/')[1]
   a.href = `/${base}/assets/download/${file}`;
   a.download = file;
   a.click();
