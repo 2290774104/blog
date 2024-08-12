@@ -1,13 +1,7 @@
 <template>
   <el-row class="picture-base64">
     <el-col :span="24" class="picture-upload">
-      <el-upload
-        v-model:file-list="fileList"
-        action="#"
-        :limit="1"
-        drag
-        :before-upload="beforeUpload"
-      >
+      <el-upload :limit="1" drag :before-upload="beforeUpload">
         <el-icon class="el-icon--upload"><upload-filled /></el-icon>
         <div class="el-upload__text">拖动或<em>点击</em>上传图片</div>
         <template #tip>
@@ -29,8 +23,8 @@
     <el-col :span="12" class="picture-output">
       <p>
         base64输出
-        <el-button @click="hanlderCopy">复制</el-button>
-        <el-button @click="hanlderReset">清空</el-button>
+        <el-button class="copy-button" @click="hanlderCopy">复制</el-button>
+        <el-button class="reset-button" @click="hanlderReset">清空</el-button>
       </p>
       <el-input
         class="output-wrap"
@@ -45,23 +39,30 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { copyText } from '@utils';
-import type { UploadUserFile } from 'element-plus';
+import type { IResult } from '@utils';
+import { loadFile, copyText } from '@utils';
+import {
+  ElRow,
+  ElCol,
+  ElUpload,
+  ElIcon,
+  ElImage,
+  ElButton,
+  ElInput,
+} from 'element-plus';
 import { UploadFilled } from '@element-plus/icons-vue';
-
-const fileList = ref<UploadUserFile[]>([]);
 
 const url = ref();
 
-const beforeUpload = (file: File) => {
-  fileList.value = [];
-  const reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onload = () => {
-    url.value = reader.result;
-  };
-  return true;
+const beforeUpload = async (file: File) => {
+  const res = (await loadFile(file)) as IResult;
+  if (res.code == 200) {
+    url.value = res.data;
+  }
+  return false;
 };
+
+defineExpose({ beforeUpload, url });
 
 const hanlderCopy = () => {
   copyText(url.value);
@@ -69,7 +70,6 @@ const hanlderCopy = () => {
 
 const hanlderReset = () => {
   url.value = '';
-  fileList.value = [];
 };
 </script>
 
