@@ -110,7 +110,10 @@ export default sidebar({
       children: 'structure',
     },
   ],
-  '/css/': [{ text: '常用css片段', link: '常用css片段' }],
+  '/css/': [
+    { text: '常用css片段', link: '常用css片段' },
+    { text: 'css文本换行', link: 'css文本换行' },
+  ],
   '/组件文档/': [
     {
       text: '破产平台',

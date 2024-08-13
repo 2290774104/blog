@@ -181,7 +181,10 @@ export default navbar([
   {
     text: 'css',
     prefix: '/css/',
-    children: [{ text: '常用css片段', link: '常用css片段' }],
+    children: [
+      { text: '常用css片段', link: '常用css片段' },
+      { text: 'css文本换行', link: 'css文本换行' },
+    ],
   },
   {
     text: '组件文档',
