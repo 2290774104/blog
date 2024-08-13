@@ -35,7 +35,10 @@ describe('PictureBase64', () => {
     };
     vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue();
     wrapper.get('.copy-button').trigger('click');
-    wrapper.get('.reset-button').trigger('click');
+    await wrapper.getComponent(ElInput).setValue(base64);
+    expect(wrapper.vm.url).toBe(base64);
+    await wrapper.get('.reset-button').trigger('click');
+    expect(wrapper.vm.url).toBe('');
   });
   test('快照测试', async () => {
     const wrapper = mount(PictureBase64);
