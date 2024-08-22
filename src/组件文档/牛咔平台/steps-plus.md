@@ -174,7 +174,7 @@ export default {
 | ------ | -------------------------------- | ------ | ------ | ------ |
 | space  | 每个 step 的间距，不填写默认 152 | number | —      | —      |
 | active | 设置当前激活步骤                 | number | —      | 0      |
-| steps  | 步骤配置                         | [Steps](#steps-plus)  | —      | -      |
+| steps  | 步骤配置                         | [Steps](#steps-attributes)  | —      | -      |
 
 ### Steps Attributes
 
