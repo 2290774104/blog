@@ -199,6 +199,13 @@ export default navbar([
           { text: 'p-file-module', link: 'p-file-module' },
         ],
       },
+      {
+        text: '牛咔平台',
+        prefix: '牛咔平台/',
+        children: [
+          { text: 'steps-plus', link: 'steps-plus' },
+        ],
+      },
     ],
   },
   {

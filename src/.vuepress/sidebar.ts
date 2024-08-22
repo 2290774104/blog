@@ -121,6 +121,12 @@ export default sidebar({
       prefix: '破产平台/',
       children: 'structure',
     },
+    {
+      text: '牛咔平台',
+      collapsible: true,
+      prefix: '牛咔平台/',
+      children: 'structure',
+    },
   ],
   '/wiki/': [
     {
