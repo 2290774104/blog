@@ -3,7 +3,7 @@
     <el-col :span="12" class="picture-input">
       <p>
         base64输入
-        <el-button @click="hanlderPaste">粘贴</el-button>
+        <el-button class="paste-button" @click="hanlderPaste">粘贴</el-button>
         <el-button @click="hanlderReset">清空</el-button>
       </p>
       <el-input
@@ -16,7 +16,7 @@
     <el-col :span="12" class="picture-preview">
       <p>
         图片预览
-        <el-button @click="handleDownload">下载</el-button>
+        <el-button class="download-button" @click="handleDownload">下载</el-button>
       </p>
       <div class="image-wrap">
         <el-image
@@ -32,8 +32,12 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { dataURLtoBlob, uuid } from '@utils'
+import { ElRow, ElCol, ElButton, ElInput, ElImage } from 'element-plus';
 
 const url = ref();
+
+defineExpose({ url })
 
 const hanlderPaste = () => {
   navigator.clipboard.readText().then((data) => {
@@ -46,15 +50,7 @@ const hanlderReset = () => {
 };
 
 const handleDownload = () => {
-  const arr = url.value.split(',');
-  const mime = arr[0].match(/:(.*?);/)[1];
-  const bstr = atob(arr[1]);
-  let n = bstr.length;
-  const u8arr = new Uint8Array(n);
-  while (n--) {
-    u8arr[n] = bstr.charCodeAt(n);
-  }
-  const blob = new Blob([u8arr], { type: mime });
+  const blob = dataURLtoBlob(url.value)
   const fileUrl = URL.createObjectURL(blob);
   console.log(fileUrl);
   const a = document.createElement('a');
@@ -63,14 +59,6 @@ const handleDownload = () => {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-};
-
-const uuid = () => {
-  return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = (Math.random() * 16) | 0;
-    const v = c === 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
 };
 </script>
 

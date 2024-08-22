@@ -4,6 +4,14 @@ export const copyText = (text: string) => {
   ElMessage.success('复制成功');
 };
 
+export const uuid = () => {
+  return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+};
+
 export const downloadLocalFile = (file: string) => {
   const a = document.createElement('a');
   const base = location.pathname.split('/')[1];
@@ -13,9 +21,9 @@ export const downloadLocalFile = (file: string) => {
 };
 
 export interface IResult {
-  code: 200 | 500
-  msg: string
-  data?: string
+  code: 200 | 500;
+  msg: string;
+  data?: string;
 }
 
 export const loadFile = (file: File) => {
@@ -26,13 +34,13 @@ export const loadFile = (file: File) => {
       resolve({
         code: 200,
         msg: 'ok',
-        data: reader.result
+        data: reader.result,
       });
     };
     reader.onerror = () => {
       reject({
         code: 500,
-        msg: '文件加载失败'
+        msg: '文件加载失败',
       });
     };
   });
