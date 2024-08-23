@@ -106,49 +106,51 @@ export default {
 
 ```vue
 <template>
-  <el-row>
-    <el-col :span="12">
-      <switch-plus
-        v-model="value"
-        :info="info"
-        showSort
-        showRemark
-        userEdit
-        @edit="handleEdit"
-      >
-        <template #remark>
-          <el-tooltip
-            class="item"
-            effect="dark"
-            :content="tooltipText"
-            placement="top"
-          >
-            <div class="textEllipsis">{{ tooltipText }}</div>
-          </el-tooltip>
-        </template>
-      </switch-plus>
-    </el-col>
-    <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
-  </el-row>
-  <el-dialog v-model="dialogVisible" title="编辑开关" width="500">
-    <el-form :model="form" label-width="auto">
-      <el-form-item label="开关label：">
-        <el-input v-model="form.label" />
-      </el-form-item>
-      <el-form-item label="序号：">
-        <el-input v-model="form.sort" />
-      </el-form-item>
-      <el-form-item label="开关备注：">
-        <el-input v-model="form.remark" />
-      </el-form-item>
-    </el-form>
-    <template slot="footer">
-      <div class="dialog-footer">
-        <el-button @click="dialogVisible = false">取消</el-button>
-        <el-button type="primary" @click="handleSubmit"> 确定 </el-button>
-      </div>
-    </template>
-  </el-dialog>
+  <div>
+    <el-row>
+      <el-col :span="12">
+        <switch-plus
+          v-model="value"
+          :info="info"
+          showSort
+          showRemark
+          userEdit
+          @edit="handleEdit"
+        >
+          <template #remark>
+            <el-tooltip
+              class="item"
+              effect="dark"
+              :content="tooltipText"
+              placement="top"
+            >
+              <div class="textEllipsis">{{ tooltipText }}</div>
+            </el-tooltip>
+          </template>
+        </switch-plus>
+      </el-col>
+      <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
+    </el-row>
+    <el-dialog v-model="dialogVisible" title="编辑开关" width="500">
+      <el-form :model="form" label-width="auto">
+        <el-form-item label="开关label：">
+          <el-input v-model="form.label" />
+        </el-form-item>
+        <el-form-item label="序号：">
+          <el-input v-model="form.sort" />
+        </el-form-item>
+        <el-form-item label="开关备注：">
+          <el-input v-model="form.remark" />
+        </el-form-item>
+      </el-form>
+      <template slot="footer">
+        <div class="dialog-footer">
+          <el-button @click="dialogVisible = false">取消</el-button>
+          <el-button type="primary" @click="handleSubmit"> 确定 </el-button>
+        </div>
+      </template>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
