@@ -4,9 +4,9 @@
       <switch-plus
         v-model="value"
         :info="info"
-        showSort
-        showRemark
-        userEdit
+        show-sort
+        show-remark
+        user-edit
         @edit="handleEdit"
       >
         <template v-slot:remark>

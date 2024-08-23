@@ -112,9 +112,9 @@ export default {
         <switch-plus
           v-model="value"
           :info="info"
-          showSort
-          showRemark
-          userEdit
+          show-sort
+          show-remark
+          user-edit
           @edit="handleEdit"
         >
           <template #remark>
@@ -199,13 +199,13 @@ export default {
 | --------------- | ------------------------ | ------------------------ | ------ | ------- |
 | value / v-model | 绑定值                   | boolean/string/number    | —      | —       |
 | info            | 面板信息                 | [Info](#info-attributes) | —      | 0       |
-| labelKey        | info 中代表 label 的字段 | string                   | —      | label   |
-| inactiveColor   | 开关开启时的颜色         | string                   | —      | #13ce66 |
-| activeColor     | 开关关闭时的颜色         | string                   | —      | #cccccc |
-| showSort        | 是否显示左上序号         | boolean                  | —      | false   |
-| sortKey         | info 中代表序号的字段    | string                   | —      | sort    |
-| showRemark      | 是否显示备注区域         | boolean                  | —      | false   |
-| userEdit        | 是否显示编辑按钮         | boolean                  | —      | false   |
+| label-key       | info 中代表 label 的字段 | string                   | —      | label   |
+| active-color    | 开关开启时的颜色         | string                   | —      | #13ce66 |
+| inactive-color  | 开关关闭时的颜色         | string                   | —      | #cccccc |
+| show-sort       | 是否显示左上序号         | boolean                  | —      | false   |
+| sort-key        | info 中代表序号的字段    | string                   | —      | sort    |
+| show-remark     | 是否显示备注区域         | boolean                  | —      | false   |
+| user-edit       | 是否显示编辑按钮         | boolean                  | —      | false   |
 
 ### Info Attributes
 
