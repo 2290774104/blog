@@ -131,7 +131,7 @@ export default {
       </el-col>
       <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
     </el-row>
-    <el-dialog v-model="dialogVisible" title="编辑开关" width="500">
+    <el-dialog :visible.sync="dialogVisible" title="编辑开关" width="500">
       <el-form :model="form" label-width="auto">
         <el-form-item label="开关label：">
           <el-input v-model="form.label" />
