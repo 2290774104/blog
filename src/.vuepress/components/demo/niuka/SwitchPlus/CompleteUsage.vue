@@ -84,10 +84,4 @@ const handleSubmit = () => {
   align-items: center;
   padding: 0 20px;
 }
-
-.textEllipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 </style>
