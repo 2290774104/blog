@@ -11,6 +11,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
+import type { PropType } from 'vue';
 import StepsItem from './StepsItem.vue';
 import type { IStep } from './StepsItem.vue';
 
@@ -25,7 +26,7 @@ const props = defineProps({
     required: true,
   },
   steps: {
-    type: Array as () => ISteps[],
+    type: Array as PropType<ISteps[]>,
     required: true,
   },
   space: {

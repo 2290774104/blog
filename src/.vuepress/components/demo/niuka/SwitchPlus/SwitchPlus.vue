@@ -23,6 +23,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
+import type { PropType } from 'vue';
 import { EditPen } from '@element-plus/icons-vue';
 
 export interface IInfo {
@@ -37,7 +38,7 @@ const props = defineProps({
     required: true,
   },
   info: {
-    type: Object as () => IInfo,
+    type: Object as PropType<IInfo>,
     required: true,
   },
   labelKey: {

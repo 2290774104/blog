@@ -14,6 +14,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { PropType } from 'vue';
 
 export interface IStep {
   title: string;
@@ -24,7 +25,7 @@ export interface IStep {
 
 const props = defineProps({
   step: {
-    type: Object as () => IStep,
+    type: Object as PropType<IStep>,
     required: true,
   },
   space: {
@@ -34,8 +35,8 @@ const props = defineProps({
 });
 
 const miidStyle = ref({
-    width: `${props.space}px`
-})
+  width: `${props.space}px`,
+});
 </script>
 
 <style lang="scss" scoped>
