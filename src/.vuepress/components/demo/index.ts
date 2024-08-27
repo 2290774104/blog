@@ -3,19 +3,24 @@ import type { App } from 'vue';
 import PreviewComponents from './PreviewComponents.vue';
 import ClickButton from './ClickButton.vue';
 import DefineProps from './DefineProps.vue';
+//
+import ToolTip from './ToolTip.vue';
 // 牛咔平台步骤条组件
 import StepsPlusBasicUsage from './niuka/StepsPlus/BasicUsage.vue';
 // 牛咔平台带面板的开关组件
 import SwitchPlusBasicUsage from './niuka/SwitchPlus/BasicUsage.vue';
 import SwitchPlusCompleteUsage from './niuka/SwitchPlus/CompleteUsage.vue';
+import ImageViewBasicUsage from './niuka/ImageView/BasicUsage.vue';
 
 const utilsComponent: any = {
   PreviewComponents,
   ClickButton,
   DefineProps,
+  ToolTip,
   StepsPlusBasicUsage,
   SwitchPlusBasicUsage,
   SwitchPlusCompleteUsage,
+  ImageViewBasicUsage,
 };
 
 export default {

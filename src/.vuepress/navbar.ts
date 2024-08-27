@@ -208,6 +208,7 @@ export default navbar([
         children: [
           { text: 'steps-plus', link: 'steps-plus' },
           { text: 'switch-plus', link: 'switch-plus' },
+          { text: 'image-view', link: 'image-view' },
         ],
       },
     ],
