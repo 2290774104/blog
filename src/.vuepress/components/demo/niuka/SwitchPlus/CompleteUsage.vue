@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts" setup>
-import { cloneDeep } from 'lodash';
+import _ from 'lodash';
 import { computed, ref } from 'vue';
 import SwitchPlus from './SwitchPlus.vue';
 
@@ -58,7 +58,7 @@ const info = ref({
   remark: '',
 });
 
-const form = ref(cloneDeep(info.value));
+const form = ref(_.cloneDeep(info.value));
 
 const tooltipText = computed(() => {
   return `备注：${info.value.remark || '暂无'}`;

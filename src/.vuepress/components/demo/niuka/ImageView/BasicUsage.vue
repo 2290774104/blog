@@ -53,7 +53,7 @@
 </template>
 
 <script lang="ts" setup>
-import { cloneDeep } from 'lodash';
+import _ from 'lodash';
 import { computed, ref } from 'vue';
 import type { PropType } from 'vue';
 import { ElMessage } from 'element-plus';
@@ -116,7 +116,7 @@ const handleEdit = (info: IImage) => {
     ElMessage('点击了编辑');
     return;
   }
-  form.value = cloneDeep(info);
+  form.value = _.cloneDeep(info);
   editIndex.value = list.value.indexOf(info);
   dialogVisible.value = true;
 };
@@ -126,7 +126,7 @@ const handleRemove = () => {
 };
 
 const handleSubmit = () => {
-  list.value[editIndex.value] = cloneDeep(form.value);
+  list.value[editIndex.value] = _.cloneDeep(form.value);
   dialogVisible.value = false;
 };
 
