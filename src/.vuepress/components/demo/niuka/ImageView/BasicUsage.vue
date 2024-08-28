@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="!userOnly">
     <image-view
       v-model="list"
       @edit="handleEdit"
@@ -28,17 +28,42 @@
       </template>
     </el-dialog>
   </div>
+  <div v-if="pattern === 'onlyPanel'">
+    <image-panel
+      :key="loadKey"
+      :info="info"
+      :view-type="showDefault ? 'view' : 'edit'"
+      :show-default="showDefault"
+      @edit="handleEdit"
+      @remove="handleRemove"
+    >
+    </image-panel>
+  </div>
+  <div v-if="pattern === 'onlyCard'">
+    <image-card
+      :key="loadKey"
+      :info="info"
+      :view-type="showEdit ? 'edit' : 'view'"
+      :show-edit="showEdit"
+      @edit="handleEdit"
+      @remove="handleRemove"
+    >
+    </image-card>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { cloneDeep } from 'lodash';
+import { computed, ref } from 'vue';
 import type { PropType } from 'vue';
+import { ElMessage } from 'element-plus';
 import { uuid } from '@utils';
 import ImageView from './ImageView.vue';
+import ImagePanel from './ImagePanel.vue';
+import ImageCard from './ImageCard.vue';
 import type { StyleType, ViewType } from './ImageView.vue';
-import { cloneDeep } from 'lodash';
 
-type Pattern = 'panel' | 'card' | 'change';
+type Pattern = 'panel' | 'card' | 'change' | 'onlyPanel' | 'onlyCard';
 
 interface IImage {
   url: string;
@@ -54,6 +79,18 @@ const props = defineProps({
     type: String as PropType<Pattern>,
     default: 'panel',
   },
+  showDefault: {
+    type: Boolean,
+    default: false,
+  },
+  showEdit: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const userOnly = computed(() => {
+  return ['onlyPanel', 'onlyCard'].includes(props.pattern);
 });
 
 const list = ref<IImage[]>([
@@ -62,6 +99,8 @@ const list = ref<IImage[]>([
     title: '百度logo',
   },
 ]);
+
+const info = ref<IImage>(list.value[0]);
 
 const dialogVisible = ref(false);
 
@@ -73,9 +112,17 @@ const form = ref<IImage>({
 const editIndex = ref();
 
 const handleEdit = (info: IImage) => {
+  if (userOnly.value) {
+    ElMessage('点击了编辑');
+    return;
+  }
   form.value = cloneDeep(info);
   editIndex.value = list.value.indexOf(info);
   dialogVisible.value = true;
+};
+
+const handleRemove = () => {
+  ElMessage('点击了删除');
 };
 
 const handleSubmit = () => {

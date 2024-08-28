@@ -246,6 +246,164 @@ new Vue({
 
 :::
 
+## ImagePanel
+
+`ImagePanel` 是 `ImageView` 中面板风格的图片展示组件
+
+### 基本用法
+
+`ImagePanel` 仅支持单个图片展示，通过 `info` 传入图片信息
+
+::: demo
+<template #component>
+<image-view-basic-usage pattern="onlyPanel"></image-view-basic-usage>
+</template>
+
+```vue
+<template>
+  <div>
+    <image-panel
+      :info="info"
+      @edit="handleEdit"
+      @remove="handleRemove"
+    ></image-panel>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info: {
+        url: 'https://www.baidu.com/img/flexible/logo/pc/index.png',
+      },
+    };
+  },
+  methods: {
+    handleEdit() {
+      this.$message('点击了编辑');
+    },
+    handleRemove() {
+      this.$message('点击了删除');
+    },
+  },
+};
+</script>
+```
+
+:::
+
+### 使用默认图片
+
+`show-default` 会展示一张默认图片
+
+::: demo
+<template #component>
+<image-view-basic-usage pattern="onlyPanel" show-default></image-view-basic-usage>
+</template>
+
+```vue
+<template>
+  <div>
+    <image-panel :info="info" show-default view-type="view"></image-panel>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info: {
+        url: '',
+      },
+    };
+  },
+};
+</script>
+```
+
+:::
+
+## ImageCard
+
+`ImageCard` 是 `ImageView` 中卡片风格的图片展示组件
+
+### 基本用法
+
+`ImageCard` 仅支持单个图片展示，通过 `info` 传入图片信息
+
+::: demo
+<template #component>
+<image-view-basic-usage pattern="onlyCard"></image-view-basic-usage>
+</template>
+
+```vue
+<template>
+  <div>
+    <image-card :info="info" view-type="view"></image-card>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info: {
+        url: 'https://www.baidu.com/img/flexible/logo/pc/index.png',
+      },
+    };
+  },
+};
+</script>
+```
+
+:::
+
+### 显示编辑按钮
+
+`ImageCard` 默认是不显示编辑按钮，通过属性 `show-edit` 显示按钮
+
+::: demo
+<template #component>
+<image-view-basic-usage pattern="onlyCard" show-edit></image-view-basic-usage>
+</template>
+
+```vue
+<template>
+  <div>
+    <image-card
+      :info="info"
+      view-type="edit"
+      show-edit
+      @edit="handleEdit"
+      @remove="handleRemove"
+    ></image-card>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      info: {
+        url: 'https://www.baidu.com/img/flexible/logo/pc/index.png',
+      },
+    };
+  },
+  methods: {
+    handleEdit() {
+      this.$message('点击了编辑');
+    },
+    handleRemove() {
+      this.$message('点击了删除');
+    },
+  },
+};
+</script>
+```
+
+:::
+
 ## ImageView Attributes
 
 | 属性名          | 说明                       | 类型                                                       | 默认值 |
@@ -261,3 +419,43 @@ new Vue({
 | 事件名 | 说明                 | 类型                                                      |
 | ------ | -------------------- | --------------------------------------------------------- |
 | edit   | 点击组件中的编辑按钮 | `Function` <tool-tip content="(info) => void"></tool-tip> |
+
+## ImageView Slots
+
+| 插槽名 | 说明         |
+| ------ | ------------ |
+| append | 组件后置插槽 |
+
+## ImagePanel Attributes
+
+| 属性名       | 说明                  | 类型                                                      | 默认值 |
+| ------------ | --------------------- | --------------------------------------------------------- | ------ |
+| info         | 图片相关信息          | object                                                    | —      |
+| view-type    | 查看类型              | enum <tool-tip content="'edit' &#124; 'view'"></tool-tip> | edit   |
+| url-key      | info 中图片地址的字段 | string                                                    | url    |
+| title-key    | info 中标题的字段     | string                                                    | title  |
+| show-default | 是否显示默认图片      | boolean                                                   | false  |
+
+## ImagePanel Events
+
+| 事件名 | 说明                 | 类型                                                      |
+| ------ | -------------------- | --------------------------------------------------------- |
+| edit   | 点击组件中的编辑按钮 | `Function` <tool-tip content="(info) => void"></tool-tip> |
+| remove | 点击组件中右上叉号   | `Function` <tool-tip content="(info) => void"></tool-tip> |
+
+## ImageCard Attributes
+
+| 属性名    | 说明                       | 类型                                                      | 默认值 |
+| --------- | -------------------------- | --------------------------------------------------------- | ------ |
+| info      | 图片相关信息               | object                                                    | —      |
+| view-type | 查看类型                   | enum <tool-tip content="'edit' &#124; 'view'"></tool-tip> | edit   |
+| url-key   | info 中图片地址的字段      | string                                                    | url    |
+| title-key | info 中标题的字段          | string                                                    | title  |
+| show-edit | 鼠标悬停时是否显示编辑按钮 | boolean                                                   | false  |
+
+## ImageCard Events
+
+| 事件名 | 说明                 | 类型                                                      |
+| ------ | -------------------- | --------------------------------------------------------- |
+| edit   | 点击组件中的编辑按钮 | `Function` <tool-tip content="(info) => void"></tool-tip> |
+| remove | 点击组件中右上叉号   | `Function` <tool-tip content="(info) => void"></tool-tip> |
