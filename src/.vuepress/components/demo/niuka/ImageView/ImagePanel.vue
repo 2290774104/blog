@@ -10,7 +10,9 @@
     </div>
     <el-image
       v-if="showDefault"
-      src="/assets/demo/niuka/ImageView/default.png"
+      :src="defaultImg"
+      :preview-src-list="[defaultImg]"
+      :preview-teleported="true"
     ></el-image>
     <el-image
       v-else
@@ -22,7 +24,8 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType, computed } from 'vue';
+import { PropType, computed, ref } from 'vue';
+import { withBase } from '@vuepress/client';
 import {
   EditPen,
   CircleClose,
@@ -55,6 +58,8 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['edit', 'remove']);
+
+const defaultImg = ref(withBase('/assets/demo/niuka/ImageView/default.png'));
 
 const isEdit = computed(() => {
   return props.viewType === 'edit';
