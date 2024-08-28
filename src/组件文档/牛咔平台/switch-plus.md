@@ -195,21 +195,21 @@ export default {
 
 ## SwitchPlus Attributes
 
-| 参数            | 说明                     | 类型                     | 可选值 | 默认值  |
-| --------------- | ------------------------ | ------------------------ | ------ | ------- |
-| value / v-model | 绑定值                   | boolean/string/number    | —      | —       |
-| info            | 面板信息                 | [Info](#info-attributes) | —      | 0       |
-| label-key       | info 中代表 label 的字段 | string                   | —      | label   |
-| active-color    | 开关开启时的颜色         | string                   | —      | #13ce66 |
-| inactive-color  | 开关关闭时的颜色         | string                   | —      | #cccccc |
-| show-sort       | 是否显示左上序号         | boolean                  | —      | false   |
-| sort-key        | info 中代表序号的字段    | string                   | —      | sort    |
-| show-remark     | 是否显示备注区域         | boolean                  | —      | false   |
-| user-edit       | 是否显示编辑按钮         | boolean                  | —      | false   |
+| 属性名          | 说明                     | 类型                     | 默认值  |
+| --------------- | ------------------------ | ------------------------ | ------- |
+| value / v-model | 绑定值                   | boolean/string/number    | —       |
+| info            | 面板信息                 | [Info](#info-attributes) | 0       |
+| label-key       | info 中代表 label 的字段 | string                   | label   |
+| active-color    | 开关开启时的颜色         | string                   | #13ce66 |
+| inactive-color  | 开关关闭时的颜色         | string                   | #cccccc |
+| show-sort       | 是否显示左上序号         | boolean                  | false   |
+| sort-key        | info 中代表序号的字段    | string                   | sort    |
+| show-remark     | 是否显示备注区域         | boolean                  | false   |
+| user-edit       | 是否显示编辑按钮         | boolean                  | false   |
 
 ### Info Attributes
 
-| 参数          | 说明         | 类型                  | 可选值 | 默认值 |
-| ------------- | ------------ | --------------------- | ------ | ------ |
-| activeValue   | 开关开启的值 | boolean/string/number | —      | true   |
-| inactiveValue | 开关关闭的值 | boolean/string/number | —      | false  |
+| 属性名        | 说明         | 类型                  | 默认值 |
+| ------------- | ------------ | --------------------- | ------ |
+| activeValue   | 开关开启的值 | boolean/string/number | true   |
+| inactiveValue | 开关关闭的值 | boolean/string/number | false  |
