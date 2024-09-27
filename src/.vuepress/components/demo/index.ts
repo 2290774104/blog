@@ -6,7 +6,7 @@ import DefineProps from './DefineProps.vue';
 //
 import ToolTip from './ToolTip.vue';
 // 牛咔平台步骤条组件
-import StepsPlusBasicUsage from './niuka/StepsPlus/BasicUsage.vue';
+import NiukaStepsBasicUsage from './niuka/NiukaSteps/BasicUsage.vue';
 // 牛咔平台带面板的开关组件
 import SwitchPlusBasicUsage from './niuka/SwitchPlus/BasicUsage.vue';
 import SwitchPlusCompleteUsage from './niuka/SwitchPlus/CompleteUsage.vue';
@@ -17,7 +17,7 @@ const utilsComponent: any = {
   ClickButton,
   DefineProps,
   ToolTip,
-  StepsPlusBasicUsage,
+  NiukaStepsBasicUsage,
   SwitchPlusBasicUsage,
   SwitchPlusCompleteUsage,
   ImageViewBasicUsage,

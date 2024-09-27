@@ -1,6 +1,6 @@
 <template>
   <div>
-    <steps-plus :active="active" :steps="steps" :space="space"></steps-plus>
+    <niuka-steps :active="active" :steps="steps" :space="space"></niuka-steps>
     <div class="mt20" v-if="operation">
       <el-button type="primary" v-if="active < 2" @click="active++">
         下一步
@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import StepsPlus from './StepsPlus.vue';
+import NiukaSteps from './modules/NiukaSteps.vue';
 
 const props = defineProps({
   space: {

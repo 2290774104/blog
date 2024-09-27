@@ -1,5 +1,5 @@
 ---
-title: steps-plus
+title: niuka-steps
 date: 2024-08-19 16:59:50
 order: 1
 category:
@@ -12,7 +12,7 @@ tag:
   - components
 ---
 
-# steps-plus
+# niuka-steps
 
 牛咔视频平台步骤条组件
 
@@ -61,13 +61,13 @@ new Vue({
 
 ::: demo
 <template v-slot:component>
-<steps-plus-basic-usage operation></steps-plus-basic-usage>
+<niuka-steps-basic-usage operation></niuka-steps-basic-usage>
 </template>
 
 ```vue
 <template>
   <div>
-    <steps-plus :active="active" :steps="steps" :space="90"></steps-plus>
+    <niuka-steps :active="active" :steps="steps" :space="90"></niuka-steps>
     <div class="mt20">
       <el-button type="primary" v-if="active < 2" @click="active++">
         下一步
@@ -110,13 +110,13 @@ export default {
 
 ::: demo
 <template v-slot:component>
-<steps-plus-basic-usage icon="edit" :space="152"></steps-plus-basic-usage>
+<niuka-steps-basic-usage icon="edit" :space="152"></niuka-steps-basic-usage>
 </template>
 
 ```vue
 <template>
   <div>
-    <steps-plus :active="active" :steps="steps"></steps-plus>
+    <niuka-steps :active="active" :steps="steps"></niuka-steps>
   </div>
 </template>
 
@@ -144,13 +144,13 @@ export default {
 
 ::: demo
 <template v-slot:component>
-<steps-plus-basic-usage :space="100"></steps-plus-basic-usage>
+<niuka-steps-basic-usage :space="100"></niuka-steps-basic-usage>
 </template>
 
 ```vue
 <template>
   <div>
-    <steps-plus :active="active" :steps="steps" :space="100"></steps-plus>
+    <niuka-steps :active="active" :steps="steps" :space="100"></niuka-steps>
   </div>
 </template>
 

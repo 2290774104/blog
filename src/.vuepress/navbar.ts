@@ -206,7 +206,7 @@ export default navbar([
         text: '牛咔平台',
         prefix: '牛咔平台/',
         children: [
-          { text: 'steps-plus', link: 'steps-plus' },
+          { text: 'niuka-steps', link: 'niuka-steps' },
           { text: 'switch-plus', link: 'switch-plus' },
           { text: 'image-view', link: 'image-view' },
         ],

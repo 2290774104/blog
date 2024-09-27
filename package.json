@@ -19,6 +19,7 @@
     "@types/lodash": "^4.17.7",
     "@utils": "file:./src/.vuepress/utils",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
     "@vitest/coverage-istanbul": "^2.0.5",
     "@vitest/ui": "^2.0.5",
     "@vue/repl": "^4.2.1",

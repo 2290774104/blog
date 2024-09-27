@@ -4,6 +4,7 @@ import { searchProPlugin } from 'vuepress-plugin-search-pro';
 import theme from './theme';
 // 使用本地Demo预览插件
 import { previewDemoPlugin } from '../../plugins/markdown/plugin-preview-demo';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import path from 'path';
 
@@ -23,9 +24,10 @@ export default defineUserConfig({
       resolve: {
         alias: {
           '@utils': resolve('./utils'),
-          '@icons': resolve('./components/icons')
+          '@icons': resolve('./components/icons'),
         },
       },
+      plugins: [vueJsx()],
       server: {
         proxy: {
           '/map': {
