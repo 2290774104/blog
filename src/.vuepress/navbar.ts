@@ -190,28 +190,12 @@ export default navbar([
     ],
   },
   {
-    text: '组件文档',
-    prefix: '/组件文档/',
-    children: [
-      {
-        text: '破产平台',
-        prefix: '破产平台/',
-        children: [
-          { text: 'p-tabs', link: 'p-tabs' },
-          { text: 'p-el-select', link: 'p-el-select' },
-          { text: 'p-file-module', link: 'p-file-module' },
-        ],
-      },
-      {
-        text: '牛咔平台',
-        prefix: '牛咔平台/',
-        children: [
-          { text: 'niuka-steps', link: 'niuka-steps' },
-          { text: 'switch-plus', link: 'switch-plus' },
-          { text: 'image-view', link: 'image-view' },
-        ],
-      },
-    ],
+    text: '破产平台',
+    link: '破产平台/overview',
+  },
+  {
+    text: '牛咔平台',
+    link: '牛咔平台/overview'
   },
   {
     text: 'wiki',

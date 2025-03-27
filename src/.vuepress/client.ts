@@ -8,6 +8,7 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn.mjs';
 import utils from './components/utils';
 import demo from './components/demo';
 import download from './components/download';
+import common from './components/common';
 
 import http from './http';
 
@@ -20,6 +21,7 @@ export default defineClientConfig({
     app.use(utils);
     app.use(demo);
     app.use(download);
+    app.use(common);
 
     app.mixin({
       mounted() {

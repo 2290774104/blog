@@ -50,8 +50,8 @@ export default sidebar({
       text: '工具库',
       collapsible: true,
       prefix: '工具库/',
-      children: 'structure'
-    }
+      children: 'structure',
+    },
   ],
   '/微前端/': [
     { text: '微前端', link: '微前端' },
@@ -114,19 +114,13 @@ export default sidebar({
     { text: '常用css片段', link: '常用css片段' },
     { text: 'css文本换行', link: 'css文本换行' },
   ],
-  '/组件文档/': [
-    {
-      text: '破产平台',
-      collapsible: true,
-      prefix: '破产平台/',
-      children: 'structure',
-    },
-    {
-      text: '牛咔平台',
-      collapsible: true,
-      prefix: '牛咔平台/',
-      children: 'structure',
-    },
+  '/破产平台/': [
+    { text: '组件预览', link: 'overview' },
+  ],
+  '/牛咔平台/': [
+    { text: '组件预览', link: 'overview' },
+    { text: 'Form 表单组件', children: [{ text: 'Switch 开关', link: 'switch' }] },
+    { text: 'Navigation 导航', children: [{ text: 'Steps 步骤条', link: 'steps' }] },
   ],
   '/wiki/': [
     {
@@ -159,7 +153,7 @@ export default sidebar({
   '/其他/': [
     {
       text: 'Windows批量修改文件名',
-      link: 'Windows批量修改文件名'
-    }
-  ]
+      link: 'Windows批量修改文件名',
+    },
+  ],
 });
