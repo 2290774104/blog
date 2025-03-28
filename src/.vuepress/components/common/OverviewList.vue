@@ -9,9 +9,11 @@
     >
       <RouteLink :to="`/${item.src}`">
         <el-card shadow="hover">
-          <div slot="header" class="clearfix">
-            <span>{{ item.name }}</span>
-          </div>
+          <template #header>
+            <div class="card-header">
+              <span>{{ item.name }}</span>
+            </div>
+          </template>
           <div class="content">
             <svg-icon :icon="item.icon"></svg-icon>
           </div>
