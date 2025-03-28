@@ -13,7 +13,7 @@
             <span>{{ item.name }}</span>
           </div>
           <div class="content">
-            <svg-icon :icon="item.src"></svg-icon>
+            <svg-icon :icon="item.icon"></svg-icon>
           </div>
         </el-card>
       </RouteLink>
@@ -47,6 +47,10 @@ const { list } = toRefs(props);
 
   ::v-deep(.el-card__body) {
     background-color: #f5f7fa;
+  }
+
+  ::v-deep(.svg-icon) {
+    height: 150px;
   }
 }
 </style>

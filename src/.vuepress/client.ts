@@ -9,6 +9,7 @@ import utils from './components/utils';
 import demo from './components/demo';
 import download from './components/download';
 import common from './components/common';
+import svg from './components/svg';
 
 import http from './http';
 
@@ -22,6 +23,7 @@ export default defineClientConfig({
     app.use(demo);
     app.use(download);
     app.use(common);
+    app.use(svg);
 
     app.mixin({
       mounted() {

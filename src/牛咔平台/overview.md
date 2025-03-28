@@ -27,10 +27,10 @@ export default {
 	data() {
 		return {
 			formList: [
-				{ name: 'Switch 开关', src: '牛咔平台/switch' },
+				{ name: 'Switch 开关', src: '牛咔平台/switch', icon: 'switch' },
 			],
 			navigationList: [
-				{ name: 'Steps 步骤条', src: '牛咔平台/steps' },
+				{ name: 'Steps 步骤条', src: '牛咔平台/steps', icon: 'steps' },
 			]
 		}
 	}
