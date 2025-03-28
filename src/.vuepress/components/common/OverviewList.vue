@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType, toRefs } from 'vue';
+import { PropType, toRefs } from 'vue';
 
 interface Item {
   name: string;
@@ -45,7 +45,7 @@ const { list } = toRefs(props);
   cursor: pointer;
   margin: 10px 0;
 
-  ::v-deep .el-card__body {
+  ::v-deep(.el-card__body) {
     background-color: #f5f7fa;
   }
 }
