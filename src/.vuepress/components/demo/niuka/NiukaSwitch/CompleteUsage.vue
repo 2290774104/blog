@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="12">
-      <switch-plus
+      <niuka-switch
         v-model="value"
         :info="info"
         show-sort
@@ -19,7 +19,7 @@
             <div class="textEllipsis">{{ tooltipText }}</div>
           </el-tooltip>
         </template>
-      </switch-plus>
+      </niuka-switch>
     </el-col>
     <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
   </el-row>
@@ -47,7 +47,7 @@
 <script lang="ts" setup>
 import _ from 'lodash';
 import { computed, ref } from 'vue';
-import SwitchPlus from './SwitchPlus.vue';
+import NiukaSwitch from './index.vue';
 
 const value = ref(true);
 

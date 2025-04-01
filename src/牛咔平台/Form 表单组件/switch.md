@@ -1,7 +1,7 @@
 ---
-title: switch-plus
+title: Switch 开关
 date: 2024-08-19 16:59:50
-order: 2
+order: 1
 category:
   - 前端
   - 组件文档
@@ -12,7 +12,7 @@ tag:
   - components
 ---
 
-# switch-plus
+# niuka-switch
 
 牛咔视频平台带面板的开发组件
 
@@ -23,36 +23,7 @@ tag:
 3. 可以通过 v-for 批量渲染，支持 sort 序号显示
 4. 支持 slot 显示备注信息
 5. 基于 vue2 版本封装，强依赖于 element-ui
-
-## 引入
-
-::: tabs
-
-@tab httpVueLoader
-
-牛咔项目使用 `httpVueLoader` 加载项目，通过路径加载组件
-
-```js
-new Vue({
-  components: {
-    SwitchPlus: 'url:/static/vue/components/src/Switch/SwitchPlus.vue',
-  },
-});
-```
-
-@tab import
-
-常规语法使用 `import` 导入组件
-
-```js
-import SwitchPlus from '/static/vue/components/src/Switch/SwitchPlus.vue';
-
-new Vue({
-  components: {
-    SwitchPlus,
-  },
-});
-```
+6. 可在非 TS 环境下正常使用，但需自行构建 jsx 环境([参考 babel-plugin-transform-vue-jsx](https://github.com/vuejs/babel-plugin-transform-vue-jsx))。
 
 :::
 
@@ -60,16 +31,18 @@ new Vue({
 
 绑定 `v-model` 记录开关的值，传入记录开关信息的 `info`
 
+可以通过 `change` 事件监听开关值的变化
+
 ::: demo
 <template #component>
-<switch-plus-basic-usage></switch-plus-basic-usage>
+  <niuka-switch-basic-usage></niuka-switch-basic-usage>
 </template>
 
 ```vue
 <template>
   <el-row>
     <el-col :span="12">
-      <switch-plus v-model="value" :info="info"></switch-plus>
+      <niuka-switch v-model="value" :info="info"></niuka-switch>
     </el-col>
     <el-col :span="12"> 当前开关的值：{{ value }} </el-col>
   </el-row>
@@ -101,7 +74,7 @@ export default {
 
 :::demo
 <template #component>
-<switch-plus-complete-usage></switch-plus-complete-usage>
+<niuka-switch-complete-usage></niuka-switch-complete-usage>
 </template>
 
 ```vue
@@ -109,7 +82,7 @@ export default {
   <div>
     <el-row>
       <el-col :span="12">
-        <switch-plus
+        <niuka-switch
           v-model="value"
           :info="info"
           show-sort
@@ -127,7 +100,7 @@ export default {
               <div class="textEllipsis">{{ tooltipText }}</div>
             </el-tooltip>
           </template>
-        </switch-plus>
+        </niuka-switch>
       </el-col>
       <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
     </el-row>

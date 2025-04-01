@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="12">
-      <switch-plus v-model="value" :info="info"></switch-plus>
+      <niuka-switch v-model="value" :info="info"></niuka-switch>
     </el-col>
     <el-col :span="12" class="result"> 当前开关的值：{{ value }} </el-col>
   </el-row>
@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import SwitchPlus from './SwitchPlus.vue';
+import NiukaSwitch from './index.vue';
 
 const value = ref('2');
 
