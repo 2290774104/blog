@@ -1,28 +1,59 @@
 // 文字对齐
 .tal {
-	text-align: left;
+  text-align: left;
 }
 
 .tac {
-	text-align: center;
+  text-align: center;
 }
 
 .tar {
-	text-align: right;
+  text-align: right;
 }
 
 // 省略号
 .textEllipsis {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // 多行文本省略号
 .moreText {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0 none;
+
+  tr,
+  th,
+  td {
+    background-color: unset !important;
+    border-top: 0 none;
+    border-right: 0 none;
+    border-left: 0 none;
+  }
+
+  th {
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    width: 50%;
+    max-width: 260px;
+    text-align: left;
+  }
+
+  thead,
+  tbody {
+    width: 100% !important;
+  }
 }
