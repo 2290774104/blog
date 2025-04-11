@@ -10,6 +10,7 @@
         :style="switchStyle"
         :active-value="activeValue"
         :inactive-value="inactiveValue"
+        :disabled="disabled"
       />
     </div>
     <div class="switch-remark" v-if="showRemark">
@@ -69,9 +70,13 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  disabled: {
+    type: Boolean,
+    default: false, 
+  }
 });
 
-const emit = defineEmits(['update:modelValue', 'edit']);
+const emit = defineEmits(['update:modelValue', 'change', 'edit']);
 
 const model_value = computed({
   get() {
@@ -79,6 +84,7 @@ const model_value = computed({
   },
   set(value) {
     emit('update:modelValue', value);
+    emit('change', value);
   },
 });
 
