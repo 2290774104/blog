@@ -8,8 +8,8 @@ import ToolTip from './ToolTip.vue';
 // 牛咔平台步骤条组件
 import NiukaStepsBasicUsage from './niuka/NiukaSteps/BasicUsage.vue';
 // 牛咔平台带面板的开关组件
-import NiukaSwitchBasicUsage from './niuka/NiukaSwitch/BasicUsage.vue';
-import NiukaSwitchCompleteUsage from './niuka/NiukaSwitch/CompleteUsage.vue';
+import NiukaSwitchBase from './niuka/NiukaSwitch/base.vue';
+import NiukaSwitchRemark from './niuka/NiukaSwitch/remark.vue';
 import ImageViewBasicUsage from './niuka/ImageView/BasicUsage.vue';
 
 const utilsComponent: any = {
@@ -18,8 +18,8 @@ const utilsComponent: any = {
   DefineProps,
   ToolTip,
   NiukaStepsBasicUsage,
-  NiukaSwitchBasicUsage,
-  NiukaSwitchCompleteUsage,
+  NiukaSwitchBase,
+  NiukaSwitchRemark,
   ImageViewBasicUsage,
 };
 
