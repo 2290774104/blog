@@ -91,6 +91,13 @@ export default navbar([
     ],
   },
   {
+    text: '微信小程序',
+    prefix: '/微信小程序/',
+    children: [
+      { text: '在小程序中使用计算属性和监听属性', link: '在小程序中使用计算属性和监听属性' },
+    ]
+  },
+  {
     text: '微前端',
     prefix: '/微前端/',
     children: [
