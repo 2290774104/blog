@@ -230,6 +230,10 @@ export default navbar([
     ],
   },
   {
+    text: '资源',
+    link: '资源/resources',
+  },
+  {
     text: '其他',
     prefix: '/其他/',
     children: [
