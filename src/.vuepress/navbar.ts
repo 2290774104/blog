@@ -94,8 +94,11 @@ export default navbar([
     text: '微信小程序',
     prefix: '/微信小程序/',
     children: [
-      { text: '在小程序中使用计算属性和监听属性', link: '在小程序中使用计算属性和监听属性' },
-    ]
+      {
+        text: '在小程序中使用计算属性和监听属性',
+        link: '在小程序中使用计算属性和监听属性',
+      },
+    ],
   },
   {
     text: '微前端',
@@ -150,6 +153,11 @@ export default navbar([
     ],
   },
   {
+    text: 'AI',
+    prefix: '/AI/',
+    children: [{ text: 'WSL下载速度提升', link: 'WSL下载速度提升' }],
+  },
+  {
     text: '工具库',
     prefix: '/工具库/',
     children: [
@@ -202,7 +210,7 @@ export default navbar([
   },
   {
     text: '牛咔平台',
-    link: '牛咔平台/overview'
+    link: '牛咔平台/overview',
   },
   {
     text: 'wiki',

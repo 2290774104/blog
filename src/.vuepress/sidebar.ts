@@ -84,6 +84,12 @@ export default sidebar({
       children: 'structure',
     },
   ],
+  '/AI/': [
+    {
+      text: 'WSL下载速度提升',
+      link: 'WSL下载速度提升',
+    },
+  ],
   '/工具库/': [
     {
       text: 'tinymce',
