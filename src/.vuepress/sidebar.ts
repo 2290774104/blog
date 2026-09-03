@@ -85,10 +85,8 @@ export default sidebar({
     },
   ],
   '/AI/': [
-    {
-      text: 'WSL下载速度提升',
-      link: 'WSL下载速度提升',
-    },
+    { text: 'docker安装', link: 'docker安装' },
+    { text: 'WSL下载速度提升', link: 'WSL下载速度提升' },
   ],
   '/工具库/': [
     {
