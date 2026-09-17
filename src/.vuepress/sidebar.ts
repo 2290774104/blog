@@ -118,28 +118,15 @@ export default sidebar({
     { text: '常用css片段', link: '常用css片段' },
     { text: 'css文本换行', link: 'css文本换行' },
   ],
-  '/破产平台/': [{ text: '组件预览', link: 'overview' }],
-  '/牛咔平台/': [
-    { text: '指南', collapsible: true, prefix: '指南/', children: 'structure' },
-    { text: '组件预览', link: 'overview' },
-    {
-      text: 'Form 表单组件',
-      collapsible: true,
-      prefix: 'Form 表单组件/',
-      children: 'structure',
-    },
-    {
-      text: 'Navigation 导航',
-      collapsible: true,
-      prefix: 'Navigation 导航/',
-      children: 'structure',
-    },
-  ],
-  '/wiki/': [
+  '/工作/': [
     {
       text: '破产平台',
-      collapsible: true,
       prefix: '破产平台/',
+      children: 'structure',
+    },
+    {
+      text: '牛咔平台',
+      prefix: '牛咔平台/',
       children: 'structure',
     },
   ],

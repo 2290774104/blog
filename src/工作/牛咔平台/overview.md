@@ -1,5 +1,5 @@
 ---
-title: 牛咔平台组件库
+title: 组件总览
 date: 2025-02-06 17:33:31
 order: 1
 category:
@@ -22,15 +22,22 @@ tag:
 
 <overview-list :list="navigationList"></overview-list>
 
+## Data 数据展示
+
+<overview-list :list="dataList"></overview-list>
+
 <script>
 export default {
 	data() {
 		return {
 			formList: [
-				{ name: 'Switch 开关', src: '牛咔平台/Form 表单组件/switch', icon: 'switch' },
+				{ name: 'Switch 开关', src: '工作/牛咔平台/Form 表单组件/switch', icon: 'switch' },
 			],
 			navigationList: [
-				{ name: 'Steps 步骤条', src: '牛咔平台/Navigation 导航/steps', icon: 'steps' },
+				{ name: 'Steps 步骤条', src: '工作/牛咔平台/Navigation 导航/steps', icon: 'steps' },
+			],
+			dataList: [
+				{ name: 'Image 图片预览', src: '工作/牛咔平台/Data 数据展示/image', icon: 'image' },
 			]
 		}
 	}

@@ -215,26 +215,18 @@ export default navbar([
     ],
   },
   {
-    text: '破产平台',
-    link: '破产平台/overview',
-  },
-  {
-    text: '牛咔平台',
-    link: '牛咔平台/overview',
-  },
-  {
-    text: 'wiki',
-    prefix: '/wiki/',
+    text: '工作',
+    prefix: '/工作/',
     children: [
       {
         text: '破产平台',
-        prefix: '破产平台/',
-        children: [
-          { text: '破产小程序发布流程', link: '破产小程序发布流程' },
-          { text: '人脸识别流程', link: '人脸识别流程' },
-        ],
+        link: '破产平台/overview',
       },
-    ],
+      {
+        text: '牛咔平台',
+        link: '牛咔平台/overview',
+      }
+    ]
   },
   {
     text: '踩坑记录',
