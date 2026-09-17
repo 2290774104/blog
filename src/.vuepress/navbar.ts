@@ -3,131 +3,8 @@ import { navbar } from 'vuepress-theme-hope';
 export default navbar([
   '/',
   {
-    text: '基础',
-    prefix: '/基础/',
-    children: [
-      {
-        text: '语法',
-        prefix: '语法/',
-        children: [
-          { text: 'JavaScript异步编程', link: 'JavaScript异步编程' },
-          { text: 'TypeScript', link: 'TypeScript' },
-          { text: 'Promise', link: 'Promise' },
-        ],
-      },
-      {
-        text: '打包工具',
-        prefix: '打包工具/',
-        children: [
-          { text: 'webpack', link: 'webpack' },
-          {
-            text: 'Vite对TypeScript的支持及其原理',
-            link: 'Vite对TypeScript的支持及其原理',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    text: 'Vue',
-    prefix: '/Vue/',
-    children: [
-      {
-        text: '工具库',
-        prefix: '工具库/',
-        children: [
-          { text: 'Vue2优雅的引入第三方库', link: 'Vue2优雅的引入第三方库' },
-        ],
-      },
-      {
-        text: 'vuepress',
-        prefix: 'vuepress/',
-        children: [
-          { text: 'vuepress-v1', link: 'vuepress-v1' },
-          { text: '在vuepress2中使用axios', link: '在vuepress2中使用axios' },
-          { text: '解决vuepress2跨域', link: '解决vuepress2跨域' },
-          { text: 'vuepress2本地插件编写', link: 'vuepress2本地插件编写' },
-          { text: '仿element风格Demo展示', link: '仿element风格Demo展示' },
-        ],
-      },
-      {
-        text: 'Vue3',
-        prefix: 'Vue3',
-        children: [
-          { text: 'Vue3基础', link: 'Vue3基础' },
-          { text: 'Vue3定义全局变量', link: 'Vue3定义全局变量' },
-          {
-            text: 'vue3-setup语法糖中的props',
-            link: 'vue3-setup语法糖中的props',
-          },
-        ],
-      },
-      {
-        text: '项目搭建',
-        prefix: '项目搭建',
-        children: [{ text: 'vue2-template', link: 'vue2-template' }],
-      },
-    ],
-  },
-  {
-    text: 'React',
-    prefix: '/React/',
-    children: [
-      { text: 'React路由使用', link: 'React路由使用' },
-      { text: 'Antd中文设置', link: 'Antd中文设置' },
-    ],
-  },
-  {
-    text: 'H5',
-    prefix: '/H5/',
-    children: [
-      {
-        text: '工具库',
-        prefix: '工具库/',
-        children: [
-          { text: '轻量级翻页插件swiper', link: '轻量级翻页插件swiper' },
-        ],
-      },
-    ],
-  },
-  {
-    text: '微信小程序',
-    prefix: '/微信小程序/',
-    children: [
-      {
-        text: '在小程序中使用计算属性和监听属性',
-        link: '在小程序中使用计算属性和监听属性',
-      },
-    ],
-  },
-  {
-    text: '微前端',
-    prefix: '/微前端/',
-    children: [
-      { text: '微前端', link: '微前端' },
-      { text: '路由分发式微前端', link: '路由分发式微前端' },
-      { text: 'iframe', link: 'iframe' },
-      {
-        text: 'single-spa',
-        prefix: 'single-spa/',
-        children: [
-          { text: 'single-spa基础', link: 'single-spa基础' },
-          { text: 'single-spa示例', link: 'single-spa示例' },
-        ],
-      },
-      {
-        text: 'qiankun',
-        prefix: 'qiankun/',
-        children: [
-          { text: 'qiankun基础', link: 'qiankun基础' },
-          { text: 'qiankun示例', link: 'qiankun示例' },
-          { text: 'qiankun集成vue2+webpack', link: 'qiankun集成vue2+webpack' },
-          { text: 'qiankun集成vue2+vite', link: 'qiankun集成vue2+vite' },
-          { text: 'qiankun集成vue3+vite', link: 'qiankun集成vue3+vite' },
-          { text: 'qiankun集成react18+vite', link: 'qiankun集成react18+vite' },
-        ],
-      },
-    ],
+    text: '前端',
+    link: '/前端/overview',
   },
   {
     text: 'nodejs',
@@ -163,56 +40,7 @@ export default navbar([
   {
     text: 'Agent',
     prefix: '/Agent/',
-    children: [
-      { text: '认识agent', link: '认识agent' },
-    ],
-  },
-  {
-    text: '工具库',
-    prefix: '/工具库/',
-    children: [
-      {
-        text: 'tinymce',
-        prefix: 'tinymce/',
-        children: [
-          { text: '在Vue中使用tinymce', link: '在Vue中使用tinymce' },
-          { text: 'tinymce图片上传插件', link: 'tinymce图片上传插件' },
-        ],
-      },
-      {
-        text: '百度地图',
-        prefix: '百度地图/',
-        children: [
-          { text: '申请开发者', link: '申请开发者' },
-          { text: '在Vue3中使用', link: '在Vue3中使用' },
-        ],
-      },
-      {
-        text: 'axios',
-        prefix: 'axios/',
-        children: [{ text: 'axios二次封装', link: 'axios二次封装' }],
-      },
-      {
-        text: '常用工具',
-        prefix: '常用工具/',
-        children: [
-          { text: 'Base64图片处理', link: 'Base64图片处理' },
-          { text: 'UUID生成器', link: 'UUID生成器' },
-          { text: '字母大小写转换', link: '字母大小写转换' },
-          { text: '时间转换', link: '时间转换' },
-          { text: 'url编码', link: 'url编码' },
-          { text: 'css格式转换', link: 'css格式转换' },
-        ],
-      },
-    ],
-  },
-  {
-    text: 'css',
-    prefix: '/css/',
-    children: [
-      { text: '常用css片段', link: '常用css片段' },
-      { text: 'css文本换行', link: 'css文本换行' },
-    ],
+    children: [{ text: '认识agent', link: '认识agent' }],
   },
   {
     text: '工作',
@@ -225,30 +53,8 @@ export default navbar([
       {
         text: '牛咔平台',
         link: '牛咔平台/overview',
-      }
-    ]
-  },
-  {
-    text: '踩坑记录',
-    prefix: '/踩坑记录/',
-    children: [
-      {
-        text: 'TypeScript',
-        link: 'TypeScript/目录',
-      },
-      {
-        text: '微前端',
-        link: '微前端/目录',
-      },
-      {
-        text: 'VuePress',
-        link: 'VuePress/目录',
       },
     ],
-  },
-  {
-    text: '资源',
-    link: '资源/resources',
   },
   {
     text: '其他',

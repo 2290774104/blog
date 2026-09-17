@@ -1,11 +1,54 @@
 import { sidebar } from 'vuepress-theme-hope';
 
 export default sidebar({
-  '/基础/': [
+  '/前端/': [
+    { text: '总览', link: 'overview' },
     {
-      text: '语法',
+      text: 'css',
       collapsible: true,
-      prefix: '语法/',
+      prefix: 'css/',
+      children: 'structure',
+    },
+    {
+      text: 'js',
+      collapsible: true,
+      prefix: 'js/',
+      children: 'structure',
+    },
+    {
+      text: 'Vue',
+      collapsible: true,
+      prefix: 'Vue/',
+      children: 'structure',
+    },
+    {
+      text: 'React',
+      collapsible: true,
+      prefix: 'React/',
+      children: 'structure',
+    },
+    {
+      text: '微信小程序',
+      collapsible: true,
+      prefix: '微信小程序/',
+      children: 'structure',
+    },
+    {
+      text: '微前端',
+      collapsible: true,
+      prefix: '微前端/',
+      children: 'structure',
+    },
+    {
+      text: '工具库',
+      collapsible: true,
+      prefix: '工具库/',
+      children: 'structure',
+    },
+    {
+      text: '资源',
+      collapsible: true,
+      prefix: '微前端/',
       children: 'structure',
     },
     {
@@ -14,59 +57,10 @@ export default sidebar({
       prefix: '打包工具/',
       children: 'structure',
     },
-  ],
-  '/Vue/': [
     {
-      text: '工具库',
+      text: '踩坑记录',
       collapsible: true,
-      prefix: '工具库/',
-      children: 'structure',
-    },
-    {
-      text: 'vuepress',
-      collapsible: true,
-      prefix: 'vuepress/',
-      children: 'structure',
-    },
-    {
-      text: 'Vue3',
-      collapsible: true,
-      prefix: 'Vue3/',
-      children: 'structure',
-    },
-    {
-      text: '项目搭建',
-      collapsible: true,
-      prefix: '项目搭建/',
-      children: 'structure',
-    },
-  ],
-  '/React/': [
-    { text: 'React路由使用', link: 'React路由使用' },
-    { text: 'Antd中文设置', link: 'Antd中文设置' },
-  ],
-  '/H5/': [
-    {
-      text: '工具库',
-      collapsible: true,
-      prefix: '工具库/',
-      children: 'structure',
-    },
-  ],
-  '/微前端/': [
-    { text: '微前端', link: '微前端' },
-    { text: '路由分发式微前端', link: '路由分发式微前端' },
-    { text: 'iframe', link: 'iframe' },
-    {
-      text: 'single-spa',
-      collapsible: true,
-      prefix: 'single-spa/',
-      children: 'structure',
-    },
-    {
-      text: 'qiankun',
-      collapsible: true,
-      prefix: 'qiankun/',
+      prefix: '踩坑记录/',
       children: 'structure',
     },
   ],
@@ -88,36 +82,6 @@ export default sidebar({
     { text: 'docker安装', link: 'docker安装' },
     { text: 'WSL下载速度提升', link: 'WSL下载速度提升' },
   ],
-  '/工具库/': [
-    {
-      text: 'tinymce',
-      collapsible: true,
-      prefix: 'tinymce/',
-      children: 'structure',
-    },
-    {
-      text: '百度地图',
-      collapsible: true,
-      prefix: '百度地图/',
-      children: 'structure',
-    },
-    {
-      text: 'axios',
-      collapsible: true,
-      prefix: 'axios/',
-      children: 'structure',
-    },
-    {
-      text: '常用工具',
-      collapsible: true,
-      prefix: '常用工具/',
-      children: 'structure',
-    },
-  ],
-  '/css/': [
-    { text: '常用css片段', link: '常用css片段' },
-    { text: 'css文本换行', link: 'css文本换行' },
-  ],
   '/工作/': [
     {
       text: '破产平台',
@@ -127,26 +91,6 @@ export default sidebar({
     {
       text: '牛咔平台',
       prefix: '牛咔平台/',
-      children: 'structure',
-    },
-  ],
-  '/踩坑记录/': [
-    {
-      text: 'TypeScript',
-      collapsible: true,
-      prefix: 'TypeScript/',
-      children: 'structure',
-    },
-    {
-      text: '微前端',
-      collapsible: true,
-      prefix: '微前端/',
-      children: 'structure',
-    },
-    {
-      text: 'VuePress',
-      collapsible: true,
-      prefix: 'VuePress/',
       children: 'structure',
     },
   ],
