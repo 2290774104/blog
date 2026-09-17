@@ -11,14 +11,6 @@ export default navbar([
     link: '/后端/overview',
   },
   {
-    text: 'AI',
-    prefix: '/AI/',
-    children: [
-      { text: 'docker安装', link: 'docker安装' },
-      { text: 'WSL下载速度提升', link: 'WSL下载速度提升' },
-    ],
-  },
-  {
     text: 'Agent',
     prefix: '/Agent/',
     children: [{ text: '认识agent', link: '认识agent' }],
