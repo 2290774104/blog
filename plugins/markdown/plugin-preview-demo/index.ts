@@ -9,10 +9,10 @@ export const previewDemoPlugin = (options = {}): Plugin => {
       name: 'vuepress-plugin-preview-demo',
       extendsMarkdown: (md) => {
         md.use(mdContainer, 'demo', {
-          validate(params) {
+          validate(params: string) {
             return params.trim().match(/^demo\s*(.*)$/);
           },
-          render(tokens, idx) {
+          render(tokens: any[], idx: number) {
             if (tokens[idx].nesting === 1) {
               return `
                 <PreviewComponents>

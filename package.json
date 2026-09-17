@@ -17,6 +17,7 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@icons": "file:./src/.vuepress/components/icons",
     "@types/lodash": "^4.17.7",
+    "@types/markdown-it-container": "^4.0.1",
     "@utils": "file:./src/.vuepress/utils",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
