@@ -1,14 +1,14 @@
 ---
 title: WSL下载速度提升
 date: 2025-07-03 09:45:18
-order: 2
+order: 4
 category:
-  - 前端
+  - 后端
   - 学习笔记
-  - AI
+  - Docker
 tag:
-  - AI
   - WSL
+  - Docker
 ---
 
 # WSL 下载速度提升

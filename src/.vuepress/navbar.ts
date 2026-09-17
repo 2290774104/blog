@@ -7,27 +7,8 @@ export default navbar([
     link: '/前端/overview',
   },
   {
-    text: 'nodejs',
-    prefix: '/nodejs/',
-    children: [
-      {
-        text: 'node',
-        prefix: 'node/',
-        children: [
-          { text: '高阶函数', link: '高阶函数' },
-          { text: 'node', link: 'node' },
-        ],
-      },
-      {
-        text: 'nestjs',
-        prefix: 'nestjs/',
-        children: [
-          { text: 'nestjs安装', link: 'nestjs安装' },
-          { text: 'nestjs基础', link: 'nestjs基础' },
-          { text: 'DTO验证入参', link: 'DTO验证入参' },
-        ],
-      },
-    ],
+    text: '后端',
+    link: '/后端/overview',
   },
   {
     text: 'AI',

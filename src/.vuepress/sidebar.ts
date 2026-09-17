@@ -64,11 +64,12 @@ export default sidebar({
       children: 'structure',
     },
   ],
-  '/nodejs/': [
+  '/后端/': [
+    { text: '总览', link: 'overview' },
     {
-      text: 'node',
+      text: 'nodejs',
       collapsible: true,
-      prefix: 'node/',
+      prefix: 'nodejs/',
       children: 'structure',
     },
     {

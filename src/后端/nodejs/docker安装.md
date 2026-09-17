@@ -1,14 +1,13 @@
 ---
 title: docker安装
 date: 2025-07-03 09:13:32
-order: 1
+order: 3
 category:
-  - 前端
+  - 后端
   - 学习笔记
-  - AI
+  - Docker
 tag:
-  - AI
-  - docker
+  - Docker
 ---
 
 # docker 安装
