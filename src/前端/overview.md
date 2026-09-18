@@ -17,6 +17,7 @@ tag:
 
 - [常用 css 片段](css/常用css片段)
 - [css 文本换行](css/css文本换行)
+- [tailwindcss](css/tailwindcss)
 
 ## React
 
