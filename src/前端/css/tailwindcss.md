@@ -28,31 +28,57 @@ tag:
 
 ```bash
 pnpm add -D tailwindcss postcss autoprefixer
-pnpm exec tailwindcss init -p
 ```
 
-生成的 `tailwind.config.js`：
+在项目根目录新建 `tailwind.config.js`：
 
 ```js
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+module.exports = {
+  content: ['./src/**/*.{vue,js,ts,jsx,tsx}', './index.html'],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+  corePlugins: {
+    preflight: false, // uni-app 必须关，否则样式冲突
+  },
+};
 ```
 
-在入口 `css` 中引入，如 Vue 项目中的 `App.vue` 中的 `style` 标签中：
+在项目根目录新建 `postcss.config.js`：
 
-```css
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+在 `vite.config.js` 中引入：
+
+```js
+export default defineConfig({
+  // 其他配置...
+  css: {
+    postcss: {
+      plugins: [require('tailwindcss'), require('autoprefixer')],
+    },
+  },
+});
+```
+
+在入口文件 `App.vue` 中引入：
+
+```vue
+<style>
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+</style>
 ```
-
-`Tailwind CSS v4` 之后改为在 `css` 中使用 `@import "tailwindcss";`，并通过 `@theme` 定义设计令牌，不再强制要求 `tailwind.config.js`。
 
 ## 3. 常用工具类
 
@@ -66,13 +92,13 @@ export default {
 <div class="grid grid-cols-3 gap-6"></div>
 ```
 
-| 类名 | 说明 |
-| --- | --- |
-| `block` / `inline-block` / `hidden` | 显示方式 |
-| `flex` / `grid` | 弹性、网格布局 |
-| `items-center` | 交叉轴居中 |
-| `justify-between` | 主轴两端对齐 |
-| `gap-4` | 子项间距 |
+| 类名                                | 说明           |
+| ----------------------------------- | -------------- |
+| `block` / `inline-block` / `hidden` | 显示方式       |
+| `flex` / `grid`                     | 弹性、网格布局 |
+| `items-center`                      | 交叉轴居中     |
+| `justify-between`                   | 主轴两端对齐   |
+| `gap-4`                             | 子项间距       |
 
 ### 3.2 间距
 
@@ -92,12 +118,12 @@ export default {
 <div class="w-full h-screen max-w-md min-h-0 size-10"></div>
 ```
 
-| 类名 | 说明 |
-| --- | --- |
-| `w-full` / `h-full` | 宽高 100% |
-| `w-screen` / `h-screen` | 视口宽高 |
-| `max-w-md` | 最大宽度 |
-| `size-10` | 同时设置宽高 |
+| 类名                    | 说明         |
+| ----------------------- | ------------ |
+| `w-full` / `h-full`     | 宽高 100%    |
+| `w-screen` / `h-screen` | 视口宽高     |
+| `max-w-md`              | 最大宽度     |
+| `size-10`               | 同时设置宽高 |
 
 ### 3.4 文字
 
@@ -105,14 +131,14 @@ export default {
 <p class="text-sm font-bold text-gray-700 leading-6 tracking-wide truncate"></p>
 ```
 
-| 类名 | 说明 |
-| --- | --- |
-| `text-sm` / `text-lg` | 字号 |
-| `font-bold` | 字重 |
-| `text-gray-700` | 文字颜色 |
-| `text-center` | 对齐方式 |
-| `leading-6` | 行高 |
-| `truncate` | 单行省略号 |
+| 类名                  | 说明       |
+| --------------------- | ---------- |
+| `text-sm` / `text-lg` | 字号       |
+| `font-bold`           | 字重       |
+| `text-gray-700`       | 文字颜色   |
+| `text-center`         | 对齐方式   |
+| `leading-6`           | 行高       |
+| `truncate`            | 单行省略号 |
 
 ### 3.5 背景与边框
 
@@ -120,13 +146,13 @@ export default {
 <div class="bg-white border border-gray-200 rounded-lg shadow-md"></div>
 ```
 
-| 类名 | 说明 |
-| --- | --- |
-| `bg-blue-500` | 背景颜色 |
+| 类名                                           | 说明     |
+| ---------------------------------------------- | -------- |
+| `bg-blue-500`                                  | 背景颜色 |
 | `bg-gradient-to-r from-blue-500 to-purple-500` | 渐变背景 |
-| `border` / `border-2` | 边框宽度 |
-| `rounded-md` / `rounded-full` | 圆角 |
-| `shadow-lg` | 阴影 |
+| `border` / `border-2`                          | 边框宽度 |
+| `rounded-md` / `rounded-full`                  | 圆角     |
+| `shadow-lg`                                    | 阴影     |
 
 ## 4. 响应式
 
