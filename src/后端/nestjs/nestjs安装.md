@@ -1,7 +1,7 @@
 ---
 title: nestjs安装
 date: 2024-06-04 14:16:24
-order: 1
+order: 3
 category:
   - 后端
   - 框架
