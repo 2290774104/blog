@@ -56,10 +56,10 @@ tsc --watch # 监控ts文件变化生成js文件
 
 ```ts
 // 小写的类型一般用于描述基本类型
-let str1: string = "1";
+let str1: string = '1';
 // 大写的类型用来描述示例类型
-let str2: String = "2";
-let str3: String = new String("3");
+let str2: String = '2';
+let str3: String = new String('3');
 ```
 
 2. 数组
@@ -70,7 +70,7 @@ let arr1: number[] = [1, 2, 3, 4];
 // Array<类型>
 let arr2: Array<number> = [1, 2, 3, 4];
 // 声明数组中的类型既有数字也有字符串
-let arr3: (number | string)[] = [1, 2, 3, 4, "a", "b"];
+let arr3: (number | string)[] = [1, 2, 3, 4, 'a', 'b'];
 ```
 
 3. 元组 tuple
@@ -78,7 +78,7 @@ let arr3: (number | string)[] = [1, 2, 3, 4, "a", "b"];
 ```ts
 // 元组还是数字，只是对每个元素的位置进行了描述
 // 元组在新增内容的时候，不能增加额外的类型值，只能是已有的，而且增加后无法访问
-let tuple: [string, number, string, number] = ["1", 2, "3", 4];
+let tuple: [string, number, string, number] = ['1', 2, '3', 4];
 ```
 
 4. 枚举
@@ -87,8 +87,795 @@ let tuple: [string, number, string, number] = ["1", 2, "3", 4];
 // 枚举类型可以进行反举（值是数字的时候可以反过来枚举），枚举没有值会根据上面的索引自动累加
 // 枚举在编译成js时，会编译成对象，通常使用常量枚举，不会额外编辑成对象，更节约性能
 const enum STARUS {
-  "OK" = 100,
-  "NO_OK",
-  "NOT_FOUND",
+  'OK' = 100,
+  'NO_OK',
+  'NOT_FOUND',
+}
+```
+
+5. 对象 object
+
+```ts
+// 对象类型
+let obj: object = {};
+let obj1: {} = {};
+// 对象类型可以描述对象的属性和方法
+let obj2: { name: string; age: number } = { name: '张三', age: 18 };
+// 可选属性加 ? 号以表示属性可以不存在
+let obj3: { name: string; age?: number } = { name: '张三' };
+// 不分配原始对象的属性，只能分配对象的属性和方法
+let obj4: { [key: string]: any } = {};
+```
+
+6. symbol
+
+`symbol` 是 ES6 新增的类型，用于创建唯一的标识符。`symbol` 类型的值是唯一的，不能被转换为字符串。`symbol` 类型的值可以作为对象的属性名。
+
+`symbol` 前面不能加 new 关键字，直接调用即可创建一个独一无二的 symbol 类型的值。
+
+```ts
+// symbol类型
+let s1: symbol = Symbol('sym');
+let s2: symbol = Symbol('sym');
+
+console.log(s1 === s2); // false
+```
+
+`symbol` 类型作为对象的属性名时，不会被 `for...in` 循环遍历到，也不会被 `Object.keys()` 、`Object.getOwnPropertyNames()` 、`JSON.stringify()` 等方法获取到。
+
+可以通过 `Object.getOwnPropertySymbols()` 方法获取到所有 symbol 类型的属性名。
+
+```ts
+const name1 = Symbol('name1');
+const obj = {
+  [name1]: '张三',
+  age: 18,
+};
+
+console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(name1)]
+```
+
+可以使用 es6 新增的 `Reflect` 类来操作 symbol 类型的属性名。
+
+```ts
+const name1 = Symbol('name1');
+const obj = {
+  [name1]: '张三',
+  age: 18,
+};
+
+console.log(Reflect.has(obj, name1)); // true
+console.log(Reflect.get(obj, name1)); // 张三
+console.log(Reflect.ownKeys(obj)); // [Symbol(name1), 'age']
+```
+
+## 3. 函数类型
+
+函数类型主要描述函数的**参数**和**返回值**，可以像变量一样为参数和返回值添加类型注解。
+
+```ts
+const sum = (a: number, b: number): number => a + b;
+```
+
+### 参数与返回值
+
+- 参数类型写在参数名之后，返回值类型写在参数列表之后
+- 返回值类型可以省略，`TypeScript` 会根据函数体自动推断
+- 参数不能多传也不能少传，类型必须匹配
+
+```ts
+// 完整写法
+function sum1(a: number, b: number): number {
+  return a + b;
+}
+
+// 省略返回值类型，由类型推断得出为 number
+function sum2(a: number, b: number) {
+  return a + b;
+}
+
+// 没有返回值时返回 void
+function log(msg: string): void {
+  console.log(msg);
+}
+```
+
+### 可选参数和默认参数
+
+可选参数使用 `?` 标识，必须放在必选参数之后；默认参数在没有传值时使用默认值。
+
+```ts
+// 可选参数：b 可以不传
+function sum(a: number, b?: number): number {
+  return b ? a + b : a;
+}
+
+// 默认参数：b 不传时默认为 0
+function sum2(a: number, b: number = 0): number {
+  return a + b;
+}
+```
+
+### 剩余参数
+
+剩余参数使用 `...` 收集多个参数为一个数组，需要显式指定数组类型。
+
+```ts
+function sum(...nums: number[]): number {
+  return nums.reduce((total, num) => total + num, 0);
+}
+
+sum(1, 2, 3); // 6
+```
+
+### 函数类型表达式
+
+使用类型别名描述一个函数的类型，箭头 `=>` 表示返回值类型。
+
+```ts
+// 定义一个函数类型：接收两个 number，返回 number
+type Sum = (a: number, b: number) => number;
+
+const sum: Sum = (a, b) => a + b;
+```
+
+使用接口描述函数类型时，需要借助调用签名：
+
+```ts
+interface Sum {
+  (a: number, b: number): number;
+}
+
+const sum: Sum = (a, b) => a + b;
+```
+
+### 函数重载
+
+当同一个函数根据不同的参数返回不同的结果时，可以使用函数重载，先声明重载签名，再写实现签名。
+
+```ts
+function fn(x: string): string;
+function fn(x: number): number;
+function fn(x: string | number): string | number {
+  return x;
+}
+
+fn('a'); // string
+fn(1); // number
+```
+
+### this 类型
+
+函数的第一个参数名为 `this` 时，用于指定函数内部 `this` 的类型。
+
+```ts
+interface User {
+  name: string;
+}
+
+function getName(this: User): string {
+  return this.name;
+}
+```
+
+### 泛型函数
+
+泛型让函数在调用时确定类型，从而复用逻辑并保留类型信息。
+
+```ts
+// T 为类型参数，调用时由传入的参数推断
+function identity<T>(value: T): T {
+  return value;
+}
+
+identity<string>('hello'); // string
+identity(123); // 自动推断为 number
+```
+
+## 4. any 和 never
+
+### any
+
+`any` 表示任意类型，一旦使用了 `any`，`TypeScript` 就会放弃对该值的类型检查，它可以被赋值为任意类型，也可以赋值给任意类型。
+
+```ts
+let value: any = 1;
+value = 'a';
+value = true;
+value = () => {};
+
+// 不会报错，也不会获得类型提示
+value.foo.bar;
+value();
+```
+
+`any` 的使用场景：
+
+- 类型暂时无法确定时作为过渡，后续应尽快补充准确的类型
+- 兼容老旧或没有类型声明的第三方库
+
+需要注意：
+
+- 滥用 `any` 会失去 `TypeScript` 的类型保护，等同于写 `JavaScript`，应尽量避免
+- 未声明类型且无法推断时，参数会被隐式推断为 `any`，开启 `noImplicitAny` 后这种写法会直接报错
+
+```ts
+// noImplicitAny 开启后报错：参数 a 隐式具有 any 类型
+function fn(a) {
+  return a;
+}
+```
+
+与 `any` 相关但更安全的类型是 `unknown`：它同样可以接收任意值，但在使用前必须先进行类型收窄，推荐用它替代 `any`。
+
+```ts
+let value: unknown = 'hello';
+
+// 报错：unknown 类型不能直接使用
+// value.toUpperCase();
+
+if (typeof value === 'string') {
+  value.toUpperCase(); // 类型收窄后才能使用
+}
+```
+
+### never
+
+`never` 表示**永远不会出现的值**，是所有类型的子类型（可以赋值给任何类型），但没有任何类型可以赋值给 `never`（除了 `never` 本身）。
+
+常见的使用场景：
+
+1. 总会抛出异常的函数，永远不会有返回值
+
+```ts
+function error(msg: string): never {
+  throw new Error(msg);
+}
+```
+
+2. 永远不会结束的循环（死循环）
+
+```ts
+function loop(): never {
+  while (true) {
+    // ...
+  }
+}
+```
+
+3. 联合类型的穷尽检查，配合 `switch` 使用，确保所有分支都被处理
+
+```ts
+type Shape = 'circle' | 'square';
+
+function area(shape: Shape): number {
+  switch (shape) {
+    case 'circle':
+      return 1;
+    case 'square':
+      return 2;
+    default: {
+      // 当所有分支都覆盖后，shape 被收窄为 never
+      // 若新增了联合类型成员而未处理，此处会报错
+      const exhaustive: never = shape;
+      return exhaustive;
+    }
+  }
+}
+```
+
+`never` 与 `void` 的区别：
+
+| 类型    | 含义                                             |
+| ------- | ------------------------------------------------ |
+| `void`  | 函数正常返回，只是没有返回值（返回 `undefined`） |
+| `never` | 函数永远不会正常返回，要么抛异常，要么死循环     |
+
+## 5. interface
+
+`interface` 用来描述一个对象的结构（有哪些属性、方法以及它们的类型），是 `TypeScript` 中定义对象类型的主要方式。
+
+### 定义对象类型
+
+```ts
+interface User {
+  name: string;
+  age: number;
+  sayHi(): void;
+}
+
+const user: User = {
+  name: '张三',
+  age: 18,
+  sayHi() {
+    console.log('hi');
+  },
+};
+```
+
+### 可选属性和只读属性
+
+- 可选属性使用 `?`，表示该属性可以不存在
+- 只读属性使用 `readonly`，初始化后不能再修改
+
+```ts
+interface User {
+  name: string;
+  age?: number;
+  readonly id: number;
+}
+
+const user: User = { name: '张三', id: 1 };
+user.name = '李四'; // 可以修改
+// user.id = 2; // 报错：id 是只读属性
+```
+
+### 索引签名
+
+当对象的属性名不确定但值的类型统一时，可以使用索引签名。
+
+```ts
+interface StringMap {
+  [key: string]: string;
+}
+
+const map: StringMap = { a: '1', b: '2' };
+```
+
+### 描述函数类型
+
+接口可以通过调用签名描述函数类型。
+
+```ts
+interface Sum {
+  (a: number, b: number): number;
+}
+
+const sum: Sum = (a, b) => a + b;
+```
+
+### 接口继承
+
+接口之间可以通过 `extends` 继承，一个接口也可以同时继承多个接口。
+
+```ts
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  bark(): void;
+}
+
+const dog: Dog = {
+  name: '旺财',
+  bark() {
+    console.log('wang');
+  },
+};
+```
+
+### 声明合并
+
+同名的 `interface` 会自动合并，常用于扩展第三方库的类型声明。
+
+```ts
+interface User {
+  name: string;
+}
+
+interface User {
+  age: number;
+}
+
+// 合并后 User 同时拥有 name 和 age
+const user: User = { name: '张三', age: 18 };
+```
+
+### interface 与 type 的区别
+
+| 对比项                   | `interface` | `type`       |
+| ------------------------ | ----------- | ------------ |
+| 描述对象                 | 支持        | 支持         |
+| 描述联合、元组、原始类型 | 不支持      | 支持         |
+| 继承 / 扩展              | `extends`   | `&` 交叉类型 |
+| 声明合并                 | 支持        | 不支持       |
+
+一般原则：描述对象结构时优先使用 `interface`，需要定义联合类型、元组或更复杂的类型时使用 `type`。
+
+```ts
+// interface 使用 extends
+interface A {
+  a: string;
+}
+interface B extends A {
+  b: string;
+}
+
+// type 使用交叉类型
+type C = { a: string };
+type D = C & { b: string };
+```
+
+## 6. class
+
+`class` 是 `ES6` 引入的语法，用于定义类。`TypeScript` 在此基础上增加了属性的类型注解和访问修饰符等特性。
+
+### 定义类
+
+类的属性需要在类中先声明并指定类型，再在构造函数中赋值。
+
+```ts
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHi(): void {
+    console.log(`我是 ${this.name}`);
+  }
+}
+
+const p = new Person('张三', 18);
+p.sayHi();
+```
+
+使用参数属性可以简化上述写法，在构造函数参数前加修饰符即可同时声明并赋值属性。
+
+```ts
+class Person {
+  // 等价于先声明再在构造函数中赋值
+  constructor(public name: string, public age: number) {}
+}
+```
+
+### 访问修饰符
+
+| 修饰符      | 说明                               |
+| ----------- | ---------------------------------- |
+| `public`    | 公开，默认值，任何地方都可访问     |
+| `private`   | 私有，只能在当前类内部访问         |
+| `protected` | 受保护，只能在当前类及其子类中访问 |
+| `readonly`  | 只读，初始化后不能修改             |
+
+```ts
+class Person {
+  public name: string;
+  private age: number;
+  protected sex: string;
+  readonly id: number;
+
+  constructor(name: string, age: number, sex: string, id: number) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+    this.id = id;
+  }
+}
+
+const p = new Person('张三', 18, '男', 1);
+p.name; // 可以访问
+// p.age; // 报错：private 属性只能在类内部访问
+// p.sex; // 报错：protected 属性只能在类及子类中访问
+```
+
+### 继承
+
+子类通过 `extends` 继承父类，使用 `super` 调用父类的构造函数和方法。
+
+```ts
+class Animal {
+  constructor(public name: string) {}
+
+  move(): void {
+    console.log(`${this.name} 在移动`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name: string, public age: number) {
+    super(name); // 调用父类构造函数
+  }
+
+  bark(): void {
+    super.move(); // 调用父类方法
+    console.log('wang');
+  }
+}
+```
+
+### 抽象类
+
+使用 `abstract` 定义的抽象类不能被实例化，只能被继承；抽象方法必须在子类中实现。
+
+```ts
+abstract class Animal {
+  // 抽象方法，没有实现，子类必须实现
+  abstract makeSound(): void;
+
+  move(): void {
+    console.log('移动');
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log('wang');
+  }
+}
+```
+
+### 接口实现
+
+类可以通过 `implements` 实现接口，必须包含接口中定义的所有成员。
+
+```ts
+interface Serializable {
+  serialize(): string;
+}
+
+class User implements Serializable {
+  constructor(public name: string) {}
+
+  serialize(): string {
+    return JSON.stringify({ name: this.name });
+  }
+}
+```
+
+一个类可以同时实现多个接口，也可以继承父类并实现接口。
+
+```ts
+class Base {}
+
+class User extends Base implements Serializable {
+  serialize(): string {
+    return '';
+  }
+}
+```
+
+### 静态成员
+
+使用 `static` 定义的属性和方法属于类本身，而不是实例，通过类名直接访问。
+
+```ts
+class Person {
+  static count = 0;
+
+  static create(): Person {
+    Person.count++;
+    return new Person();
+  }
+}
+
+Person.count;
+Person.create();
+```
+
+## 7. 泛型
+
+泛型（`Generics`）用来在定义函数、接口、类时不预先指定具体类型，而是在使用时再确定类型，从而在复用逻辑的同时保留类型信息。
+
+### 泛型函数
+
+在函数名后使用 `<T>` 声明类型参数，`T` 只是一个占位符，调用时由传入的参数推断或手动指定。
+
+```ts
+// T 为类型参数，调用时由传入的参数推断
+function identity<T>(value: T): T {
+  return value;
+}
+
+identity<string>('hello'); // 手动指定为 string
+identity(123); // 自动推断为 number
+```
+
+多个类型参数时用逗号分隔：
+
+```ts
+function pair<K, V>(key: K, value: V): [K, V] {
+  return [key, value];
+}
+
+pair('a', 1); // [string, number]
+```
+
+### 泛型接口
+
+类型参数定义在接口名之后，使用时再传入具体类型。
+
+```ts
+interface Result<T> {
+  code: number;
+  data: T;
+  message: string;
+}
+
+// 指定 data 为 User 类型
+interface User {
+  name: string;
+}
+
+const res: Result<User> = {
+  code: 200,
+  data: { name: '张三' },
+  message: 'ok',
+};
+```
+
+### 泛型类
+
+类型参数定义在类名之后，作用域为整个类。
+
+```ts
+class Stack<T> {
+  private items: T[] = [];
+
+  push(item: T): void {
+    this.items.push(item);
+  }
+
+  pop(): T | undefined {
+    return this.items.pop();
+  }
+}
+
+const stack = new Stack<number>();
+stack.push(1);
+stack.pop(); // number | undefined
+```
+
+### 泛型约束
+
+使用 `extends` 对类型参数进行约束，限制传入的类型必须满足某些条件。
+
+```ts
+// 约束 T 必须拥有 length 属性
+interface Lengthwise {
+  length: number;
+}
+
+function getLength<T extends Lengthwise>(arg: T): number {
+  return arg.length;
+}
+
+getLength('hello'); // 字符串有 length
+getLength([1, 2, 3]); // 数组有 length
+// getLength(123); // 报错：number 没有 length
+```
+
+结合 `keyof` 约束对象的属性名，保证访问的属性一定存在：
+
+```ts
+// K 必须是 T 的键之一
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = { name: '张三', age: 18 };
+getValue(user, 'name'); // string
+// getValue(user, 'sex'); // 报错：'sex' 不是 user 的键
+```
+
+### 泛型默认值
+
+类型参数可以设置默认值，未指定时使用默认类型。
+
+```ts
+interface Result<T = any> {
+  code: number;
+  data: T;
+}
+
+const res1: Result = { code: 200, data: '任意类型' };
+const res2: Result<string> = { code: 200, data: 'hello' };
+```
+
+## 8. 声明文件
+
+声明文件以 `.d.ts` 结尾，只包含类型声明、不包含具体实现，用于为 `JavaScript` 代码或第三方库提供类型信息，编译后不会生成 `js` 代码。
+
+### declare 声明
+
+使用 `declare` 描述已经存在的变量、函数、类等，告诉 `TypeScript` 它们的存在和类型。
+
+```ts
+// 声明全局变量
+declare const VERSION: string;
+
+// 声明全局函数
+declare function greet(name: string): void;
+
+// 声明全局类
+declare class Animal {
+  name: string;
+  constructor(name: string);
+  move(): void;
+}
+
+// 声明命名空间
+declare namespace MyLib {
+  function show(): void;
+}
+```
+
+### 声明模块
+
+当引入的第三方库没有类型声明时，可以用 `declare module` 为其补充类型。
+
+```ts
+// 有具体类型
+declare module 'my-lib' {
+  export function sum(a: number, b: number): number;
+}
+
+// 无法确定类型时，使用通配符，避免导入报错
+declare module '*.css';
+declare module '*.png' {
+  const src: string;
+  export default src;
+}
+```
+
+### 扩展已有模块
+
+使用 `declare module` 配合导入可以给已有模块扩展类型，例如给 `vue` 扩展全局属性：
+
+```ts
+// 扩展 vue 模块的 ComponentCustomProperties
+import 'vue';
+
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    $http: typeof axios;
+  }
+}
+
+export {};
+```
+
+### 扩展全局
+
+在模块文件中使用 `declare global` 可以向全局作用域添加类型声明。
+
+```ts
+export {};
+
+declare global {
+  interface Window {
+    __APP_VERSION__: string;
+  }
+
+  const __DEV__: boolean;
+}
+```
+
+### 三斜线指令
+
+声明文件顶部可以使用三斜线指令引用其他声明文件或依赖的 `@types` 包。
+
+```ts
+/// <reference types="node" />
+/// <reference path="./global.d.ts" />
+```
+
+### 类型声明来源
+
+- 库自带：在 `package.json` 的 `types` / `typings` 字段中指定，或在包内提供 `index.d.ts`
+- 社区维护：通过 `npm install -D @types/包名` 安装，如 `@types/node`、`@types/lodash`
+- 自行编写：项目根目录或 `types` 目录下新建 `xxx.d.ts`，并确保被 `tsconfig.json` 的 `include` 覆盖
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": ["node", "vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
 ```
