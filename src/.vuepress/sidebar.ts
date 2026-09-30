@@ -48,7 +48,7 @@ export default sidebar({
     {
       text: '资源',
       collapsible: true,
-      prefix: '微前端/',
+      prefix: '资源/',
       children: 'structure',
     },
     {

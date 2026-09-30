@@ -14,6 +14,10 @@ tag:
 
 # Overview 组件总览
 
+## 指南
+
+<overview-list :list="guideList"></overview-list>
+
 ## Form 表单组件
 
 <overview-list :list="formList"></overview-list>
@@ -30,6 +34,10 @@ tag:
 export default {
 	data() {
 		return {
+			guideList: [
+				{ name: '安装', src: '工作/牛咔平台/指南/安装', icon: 'guide' },
+				{ name: '快速开始', src: '工作/牛咔平台/指南/快速开始', icon: 'guide' },
+			],
 			formList: [
 				{ name: 'Switch 开关', src: '工作/牛咔平台/Form 表单组件/switch', icon: 'switch' },
 			],
